@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8468C36FD141935724FE6C7434E8D4EE4D795ADB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8468C36FD141935724FE6C7434E8D4EE4D795ADB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4EDB538F-726A-4D72-B2F9-285A9AA5DE88",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8468C36FD141935724FE6C7434E8D4EE4D795ADB" : "modest_sdk_ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ModalShop",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ExampleProjects\/ModalShop\/ModalShop.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:modestinc\/modest_sdk_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8468C36FD141935724FE6C7434E8D4EE4D795ADB"
+    }
+  ]
+}

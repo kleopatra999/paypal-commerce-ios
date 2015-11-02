@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, "7.0"
+
+link_with 'TabBarShop'
+
+pod 'ModestStoreSDK', :git => 'git@github.com:modestinc/modest_sdk_ios.git'
+pod 'BlockRSSParser'
+
+post_install do |generate|
+   require 'fileutils'
+   FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-acknowledgements.plist', 'TabBarShop/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end

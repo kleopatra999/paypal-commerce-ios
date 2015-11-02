@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+
+pod 'ModestStoreSDK', :git => 'git@github.com:modestinc/modest_sdk_ios.git'
+pod 'BlockRSSParser'
+
+

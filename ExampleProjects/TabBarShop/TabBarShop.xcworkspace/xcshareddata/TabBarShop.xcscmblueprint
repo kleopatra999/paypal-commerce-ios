@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8468C36FD141935724FE6C7434E8D4EE4D795ADB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8468C36FD141935724FE6C7434E8D4EE4D795ADB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7CF676B1-E9FF-4793-AF9C-7D42A6C2395E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8468C36FD141935724FE6C7434E8D4EE4D795ADB" : "modest_sdk_ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TabBarShop",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ExampleProjects\/TabBarShop\/TabBarShop.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:modestinc\/modest_sdk_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8468C36FD141935724FE6C7434E8D4EE4D795ADB"
+    }
+  ]
+}
