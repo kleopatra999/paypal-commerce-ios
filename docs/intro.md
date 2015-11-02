@@ -32,6 +32,6 @@ Features of the platform:
 - [Shawnimals](https://itunes.apple.com/us/app/shawnimals-shop/id842751231?mt=8)
 
 ### Support
-For bugs & feature requests, please [file an issue](https://github.com/modestinc/modest_sdk_ios/issues).
+For bugs & feature requests, please [file an issue](https://github.com/braintree/paypal-commerce-ios/issues).
 
 If you need help or have questions, please email [commerce-sdk@paypal.com](mailto:commerce-sdk@paypal.com).
