@@ -2,7 +2,7 @@
 
 If you would like to include Facebook login in your app, then you'll need to:
 
-1. Set up Facebook on the Control Panel under [General Settings](https://panel.modest.com/stores/shawnimals/settings).
+1. Set up Facebook on the Commerce Panel under [General Settings](https://commerce.paypal.com/stores/shawnimals/settings).
 1. Add your Facebook App ID to your `Info.plist` using the key `FacebookAppID`.
 1. Add the Facebook URL scheme to your `Info.plist`:
   1. In Xcode, select your Target.
