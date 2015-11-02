@@ -4,7 +4,7 @@ platform :ios, "7.0"
 
 link_with 'Shop'
 
-pod 'ModestStoreSDK', :git => 'git@github.com:modestinc/modest_sdk_ios.git'
+pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'
 
 post_install do |generate|
    require 'fileutils'
