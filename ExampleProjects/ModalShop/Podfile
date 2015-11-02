@@ -1,6 +1,14 @@
-platform :ios, '7.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'ModestStoreSDK', :git => 'git@github.com:modestinc/modest_sdk_ios.git'
+platform :ios, "7.0"
+
+link_with 'ModalShop'
+
+pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'
 pod 'BlockRSSParser'
 
+post_install do |generate|
+   require 'fileutils'
+   FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-acknowledgements.plist', 'ModalShop/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end
 
