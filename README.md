@@ -52,7 +52,7 @@ Add your app to the [PayPal Commerce Panel](https://commerce.paypal.com/sdk/ios)
 #### Add ModestStoreSDK to Your App Delegate
 In your app delegate:
 
-```
+```objc
 #import <ModestStoreSDK/ModestStoreSDK.h>
 ```
 
@@ -62,7 +62,7 @@ Use the Client ID & Secret you created above.
 
 Within `application:didFinishLaunchingWithOptions:`:
 
-```
+```objc
 [ModestStoreSDK configureWithClientID:@"client-id" 
                          clientSecret:@"client-secret" 
                         launchOptions:launchOptions];
@@ -77,7 +77,7 @@ In your app's `Info.plist`, please make the following changes:
 - `LSApplicationQueriesSchemes` is needed for Facebook & PayPal to work properly in iOS 9+.
 
 Updates:
-```
+```xml
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSAppTransportSecurity</key>
@@ -144,7 +144,7 @@ If you are building multiple apps that include the same Modest shop, please be s
 
 And in order for PayPal Commerce to be able to see these URLs, you'll need to add or modify the `application:openURL:…` method in your app delegate:
 
-```
+```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     [ModestStoreSDK openURL:url sourceApplication:sourceApplication annotation:annotation];
     return YES;
@@ -157,7 +157,7 @@ To deep-link to products & categories, please follow our [URL specs docs](docs/u
 #### Push Notification Support
 
 For PayPal Commerce to support push notifications for your store, you'll need to add or modify these methods in your app delegate:
-```
+```objc
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     [ModestStoreSDK didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
@@ -175,7 +175,7 @@ For PayPal Commerce to support push notifications for your store, you'll need to
 #### iOS 9 Spotlight Search Indexing
 
 In order for products in the end-users' spotlight search to open the app in the correct place, please add this to your App Delegate:
-```
+```objc
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray *restorableObjects))restorationHandler {
     [ModestStoreSDK continueUserActivity:userActivity restorationHandler:restorationHandler];
     return YES;
@@ -194,7 +194,7 @@ There are three types of apps you might be creating.
 #### Modal Presentation
 The most popular approach is to present the store modally. Use this method wherever you want the store presented, typically from a button or some other user action.
 
-```
+```objc
 [ModestStoreSDK presentModalStore];
 ```
 
@@ -202,12 +202,12 @@ The most popular approach is to present the store modally. Use this method where
 
 #### Tight UI Integration
 If you want to integrate the store UI more tightly with your own app, you can use the embedded view controller via:
-```
+```objc
 UIViewController *mdstVC = [ModestStoreSDK modestRootViewController];
 ```
 
 One popular approach is to use this in a tab bar:
-```
+```objc
 tabViewController.viewControllers = @[infoVC, mdstVC, aboutVC];
 ```
 
@@ -216,7 +216,7 @@ tabViewController.viewControllers = @[infoVC, mdstVC, aboutVC];
 #### Standalone Shop
 Finally, if you want *just* the store as an app, without anything else, you can implement this method in your `application:didFinishLaunchingWithOptions:` after you [configure the client](#configure-the-client).
 
-```
+```objc
 [ModestStoreSDK presentStoreApp];
 ```
 
