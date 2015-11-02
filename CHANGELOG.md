@@ -9,7 +9,7 @@
 - iOS 9 support: Spotlight Search Indexing, Safari View Controller.
     -  For Spotlight Search Indexing to work, please implement in your App Delegate:
     
-        ```
+        ```objc
         - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray *restorableObjects))restorationHandler {
             [ModestStoreSDK continueUserActivity:userActivity restorationHandler:restorationHandler];
             return YES;
