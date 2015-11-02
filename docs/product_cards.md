@@ -6,11 +6,11 @@ A product card is a simple view that easily allows users to find & buy products 
 
 These are views that take a search term as input. To embed a product card into your app:
 
-```
+```objc
 CGRect rect = CGRectMake(0, 0, 320, 80);
 NSString *searchTerm = @"ninja cats";
 MDSTProductCardView *productCardView = [ModestStoreSDK productCardViewWithFrame:rect 
-                                                                 searchTerm:searchTerm 
+                                                                     searchTerm:searchTerm 
                                                                      completion:^(BOOL success, NSError *error) {
 
 }];
@@ -18,7 +18,7 @@ MDSTProductCardView *productCardView = [ModestStoreSDK productCardViewWithFrame:
 ```
 
 Alternatively, if you want to find a product by its group id:
-```
+```objc
 CGRect rect = CGRectMake(0, 0, 320, 80);
 NSString *productGroupID = @""; //use one of your product group ids
 MDSTProductCardView *productCardView = [ModestStoreSDK productCardViewWithFrame:rect 
@@ -41,7 +41,7 @@ You can render a product view within your own app, and allow your users to initi
 ## Display and purchase a product from your app with your own UI
 You can also display product information and initiate a purchase using your own UI by fetching a `MDSTProduct` object and executing a purchase on it per some user action.
 
-```
+```objc
 [ModestStoreSDK fetchProductWithGroupID:@"" 
                              completion:^(MDSTProduct *product, NSError *error){
         //display something notifying what they're buying
@@ -49,7 +49,7 @@ You can also display product information and initiate a purchase using your own 
 ```
 
 Then once the user initiates a purchase, you would call:
-```
+```objc
 [ModestStoreSDK purchaseProduct:product];
 ```
 
