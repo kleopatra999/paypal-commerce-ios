@@ -71,7 +71,7 @@ THE SOFTWARE.
   s.requires_arc    = true
   
   s.subspec 'Core' do |ss|
-    ss.source       = { :git => "git@github.com:modestinc/modest_sdk_ios.git", :tag => "1.8.1" }
+    ss.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "1.8.1" }
 
     ss.source_files    = "ModestStoreSDK/*.h"
     ss.public_header_files = "ModestStoreSDK/*.h"
