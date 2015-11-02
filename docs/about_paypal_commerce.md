@@ -6,5 +6,5 @@ We're actively building out this SDK, and we'll be updating this repo on a regul
 
 
 ## Contact Us
-- For bugs & feature requests, please [file an issue](https://github.com/modestinc/modest_sdk_ios/issues).
+- For bugs & feature requests, please [file an issue](https://github.com/braintree/paypal-commerce-ios/issues).
 - If you need help or have questions, please email [commerce-sdk@paypal.com](mailto:commerce-sdk@paypal.com).
