@@ -132,7 +132,7 @@ PayPal Commerce uses a login system that eschews passwords in favor of an email-
 
 ##### In order for this flow to work properly, please add the custom URL scheme for PayPal Commerce. 
 
-You can get your URL scheme from the [Control Panel -> Advanced -> iOS SDK](https://panel.modest.com/sdk/ios). Then, add your URL scheme to your project:
+You can get your URL scheme from the [Commerce Panel -> Advanced -> iOS SDK](https://commerce.paypal.com/sdk/ios). Then, add your URL scheme to your project:
 
 1. In `Xcode`, select your Target.
 1. Under `URL Types`, add a new type (`+` button).
