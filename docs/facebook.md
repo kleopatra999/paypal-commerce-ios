@@ -11,7 +11,7 @@ If you would like to include Facebook login in your app, then you'll need to:
 1. Updates to `Info.plist`.
   1. Add or update the `LSApplicationQueriesSchemes` array. It should include `fbauth2`. For example:
 
-	```
+	```xml
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -22,7 +22,7 @@ If you would like to include Facebook login in your app, then you'll need to:
 ```  
   1. `NSAppTransportSecurity` allows us to securely communicate with Facebook in iOS 9+.
   
-	```
+	```xml
 <key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
