@@ -37,7 +37,7 @@ We support using CocoaPods to implement the PayPal Commerce SDK in your project.
 
 To install the PayPal Commerce SDK using CocoaPods, simply add this to your `Podfile` & run `pod install`:
 ```
-pod 'ModestStoreSDK', :git => 'git@github.com:modestinc/modest_sdk_ios.git'
+pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'
 ```
 
 If you don't already use CocoaPods acknowledgements, you'll need to reference [Modest-Acknowledgements.md](ModestStoreSDK/Modest-Acknowledgements.md) somewhere in your app, so proper licensing attribution will be covered.
