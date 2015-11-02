@@ -1,23 +1,23 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8468C36FD141935724FE6C7434E8D4EE4D795ADB",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D164AD1B02B442FC3A617CFFD2900977BA61336B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "8468C36FD141935724FE6C7434E8D4EE4D795ADB" : 0
+    "D164AD1B02B442FC3A617CFFD2900977BA61336B" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7CF676B1-E9FF-4793-AF9C-7D42A6C2395E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "8468C36FD141935724FE6C7434E8D4EE4D795ADB" : "modest_sdk_ios"
+    "D164AD1B02B442FC3A617CFFD2900977BA61336B" : "paypal-commerce-ios\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "TabBarShop",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ExampleProjects\/TabBarShop\/TabBarShop.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:modestinc\/modest_sdk_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:braintree\/paypal-commerce-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8468C36FD141935724FE6C7434E8D4EE4D795ADB"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D164AD1B02B442FC3A617CFFD2900977BA61336B"
     }
   ]
 }
