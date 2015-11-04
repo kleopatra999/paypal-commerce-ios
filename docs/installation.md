@@ -19,6 +19,8 @@ You'll need to install each of these dependencies. Versions listed are what we t
 
 ### Other libraries already built into the SDK
 
+These libraries are already compiled into the ModestStoreSDK library.
+
 - [BCCKeychain](https://github.com/brooklyncomputerclub/BCCKeychain)
 - [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout)
 - [Core Text Label](https://github.com/rhaining/Core-Text-Label)
