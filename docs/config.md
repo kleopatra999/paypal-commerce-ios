@@ -26,7 +26,6 @@ This is optional.
 	   1. `banner_color`: The background color of the header banner in the receipt.
 	   1. `modal_color`: The background color of the sidebar menu, as well as modal overlays.
 	   1. `checkmark_color`: The checkmark color across the app.
-- `facebook_url_scheme_suffix`: If you have multiple apps hooked up to the same Facebook App, add this key to the PayPal Commerce Config with the suffix you added to your Facebook URL Scheme. Please be sure to follow our [Facebook doc](facebook.md).
 
 
 ### Modest-Assets.xcassets
