@@ -136,9 +136,9 @@ You can get your URL scheme from the [Commerce Panel -> Advanced -> iOS SDK](htt
 
 1. In `Xcode`, select your Target.
 1. Under `URL Types`, add a new type (`+` button).
-1. In the `URL Scheme` field, enter the scheme provided by Modest (e.g., `mdst-acme-shovels`).
+1. In the `URL Scheme` field, enter the scheme provided by PayPal Commerce (e.g., `pypl-acme-shovels`).
 
-If you are building multiple apps that include the same Modest shop, please be sure to [create multiple OAuth clients](#multiple-ios-apps-per-store).
+If you are building multiple apps that include the same PayPal Commerce shop, please be sure to [create multiple OAuth clients](#multiple-ios-apps-per-store).
 
 #### URL Handling
 
