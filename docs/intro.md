@@ -34,4 +34,4 @@ Features of the platform:
 ### Support
 For bugs & feature requests, please [file an issue](https://github.com/braintree/paypal-commerce-ios/issues).
 
-If you need help or have questions, please email [commerce-sdk@paypal.com](mailto:commerce-sdk@paypal.com).
+If you need help or have questions, please email [commerce-sdk@getbraintree.com](mailto:commerce-sdk@getbraintree.com).

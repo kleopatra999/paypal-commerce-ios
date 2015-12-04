@@ -24,7 +24,7 @@ Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want t
 ## Communication
 - [Sign up to receive emails when we release new versions of the SDK](http://eepurl.com/_c1K9). When a new version is released, we will email you, as well as post a tag in the [Releases section](https://github.com/braintree/paypal-commerce-ios/releases) and update the [CHANGELOG.md](CHANGELOG.md) file.
 - For bugs & feature requests, please [file an issue](https://github.com/braintree/paypal-commerce-ios/issues).
-- If you need help or have questions, please email [commerce-sdk@paypal.com](mailto:commerce-sdk@paypal.com).
+- If you need help or have questions, please email [commerce-sdk@getbraintree.com](mailto:commerce-sdk@getbraintree.com).
 
 
 ## Requirements

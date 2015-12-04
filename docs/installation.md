@@ -31,4 +31,4 @@ You'll need to reference [Modest-Acknowledgements.md](../ModestStoreSDK/Modest-A
 
 ### Support
 
-If you have questions on dependencies, please reach out to us at [commerce-sdk@paypal.com](mailto:commerce-sdk@paypal.com).
+If you have questions on dependencies, please reach out to us at [commerce-sdk@getbraintree.com](mailto:commerce-sdk@getbraintree.com).
