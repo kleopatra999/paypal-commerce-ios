@@ -64,7 +64,7 @@ THE SOFTWARE.
                  LICENSE
   }
 
-  s.author  = { "PayPal, Inc" => "commerce-sdk@paypal.com" }
+  s.author  = { "PayPal, Inc" => "commerce-sdk@getbraintree.com" }
   
   s.platform = :ios, "7.0"
 
