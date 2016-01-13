@@ -1,5 +1,11 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v1.8.6 – December 16, 2015
+- Fixes bug where subcategory product lists would not load properly. This is related to AFNetworking v2.6.0's update to where they no longer encode / and ? characters in query parameters in GET requests.
+
+## v1.8.5 – November 17, 2015
+- Fixes bug where 'open shipments' header in the shipments history view wasn't showing up properly in iOS 9+.
+
 ## v1.8.1 – October 29, 2015
 - Updates Apple Pay payment sheet to reflect the app name as the merchant on the 'total' line.
 - Fixes bug where folks could enter the same promo code twice – this was just a display bug. Upon purchase, it would only get applied once.
