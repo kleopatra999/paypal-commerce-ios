@@ -73,7 +73,7 @@ If you are using a tab bar controller to present the shop to your users, or if y
 #### Info.plist Updates
 In your app's `Info.plist`, please make the following changes:
 - `UIViewControllerBasedStatusBarAppearance` allows us to show & hide the status bar as needed.
-- `NSAppTransportSecurity` allows us to securely communicate with Cloudfront & Facebook in iOS 9+. Modest communicates over `https`, but our images are hosted on Amazon's Cloudfront servers, which currently require the `forward secrecy` exception. (We expect this to change soon).
+- `NSAppTransportSecurity` allows us to securely communicate with Cloudfront & Facebook in iOS 9+. Modest communicates over `https`, but we using loggly.com for internal API logging, which currently require the `forward secrecy` exception. (We expect this to change soon).
 - `LSApplicationQueriesSchemes` is needed for Facebook & PayPal to work properly in iOS 9+.
 
 Updates:
@@ -84,9 +84,9 @@ Updates:
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>cloudfront.net</key>
+			<key>loggly.com</key>
 			<dict>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
@@ -95,21 +95,21 @@ Updates:
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
 			<key>fbcdn.net</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
 			<key>akamaihd.net</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
 		</dict>

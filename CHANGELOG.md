@@ -1,5 +1,10 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v1.9 – February 2016
+- Braintree V.Zero integration provides added security for your customers’ credit card information.
+- Within your App Transport Security section of your Info.plist, you can now remove the entry for “Cloudfront.net”, and add in one for “loggly.com”. Get the details at [Info.plist](README.md#infoplist-updates).
+
+
 ## v1.8.6 – December 16, 2015
 - Fixes bug where subcategory product lists would not load properly. This is related to AFNetworking v2.6.0's update to where they no longer encode / and ? characters in query parameters in GET requests.
 

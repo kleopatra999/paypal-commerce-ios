@@ -47,30 +47,30 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>akamaihd.net</key>
+			<key>loggly.com</key>
 			<dict>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
-			<key>cloudfront.net</key>
+			<key>akamaihd.net</key>
 			<dict>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
 			<key>facebook.com</key>
 			<dict>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
 			<key>fbcdn.net</key>
 			<dict>
-				<key>NSExceptionRequiresForwardSecrecy</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
