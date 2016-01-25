@@ -94,4 +94,13 @@
     self.tabBarController.selectedIndex = 1;
 }
 
+// In order for Home Screen 3D Touch actions to work properly in iOS 9+ on supported devices:
+-(void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
+    BOOL didPerformAction = [ModestStoreSDK performActionForShortcutItem:shortcutItem];
+    if(!didPerformAction){
+        //if you added any custom 3D Touch shortcuts, you can handle them here
+    }
+    completionHandler(didPerformAction);
+}
+
 @end
