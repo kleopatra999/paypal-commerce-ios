@@ -124,6 +124,7 @@ Updates:
 		<string>com.paypal.ppclient.touch.v1</string>
 		<string>com.paypal.ppclient.touch.v2</string>
 		<string>org-appextension-feature-password-management</string>
+		<string>instagram</string>
 	</array>
         <key>UIApplicationShortcutItems</key>
         <array>
