@@ -75,6 +75,7 @@ In your app's `Info.plist`, please make the following changes:
 - `UIViewControllerBasedStatusBarAppearance` allows us to show & hide the status bar as needed.
 - `NSAppTransportSecurity` allows us to securely communicate with Cloudfront & Facebook in iOS 9+. Modest communicates over `https`, but we using loggly.com for internal API logging, which currently require the `forward secrecy` exception. (We expect this to change soon).
 - `LSApplicationQueriesSchemes` is needed for Facebook & PayPal to work properly in iOS 9+.
+- `UIApplicationShortcutItems` is needed to support 3D Touch from the Home Screen App Icon on iPhone 6s & 6s Plus.
 
 Updates:
 ```xml
@@ -124,6 +125,33 @@ Updates:
 		<string>com.paypal.ppclient.touch.v2</string>
 		<string>org-appextension-feature-password-management</string>
 	</array>
+        <key>UIApplicationShortcutItems</key>
+        <array>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeHome</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Shop</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.home</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeSearch</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Search</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.search</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeTime</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Purchases</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.order-history</string>
+            </dict>
+        </array>
 ```
 
 #### Custom URL Scheme for User Login
@@ -182,6 +210,18 @@ In order for products in the end-users' spotlight search to open the app in the 
 }
 ```
 
+#### iPhone 6s/6s Plus 3D Touch
+
+In order for your users to be able to open the app from the Home Screen App Icon's 3D Touch menu, you'll need to add this to your App Delegate:
+```objc
+-(void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
+    BOOL didPerformAction = [ModestStoreSDK performActionForShortcutItem:shortcutItem];
+    if(!didPerformAction){
+        //if you added any custom 3D Touch shortcuts, you can handle them here
+    }
+    completionHandler(didPerformAction);
+}
+```
 
 #### Facebook Login
 
