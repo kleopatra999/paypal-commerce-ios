@@ -1,5 +1,12 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v1.9 – February 2016
+- Modest is now PayPal Commerce! Check us out at *****
+- Braintree’s V.zero integration adds increased security for your customers’ credit cards.
+- Within your App Transport Security section of your Info.plist, you can now remove the entry for “Cloudfront.net”, and add in one for “loggly.com”. Get the details at [Info.plist](README.md#infoplist-updates).
+- Now supports 3D Touch on the Home Screen, but it requires you to update your [Info.plist](README.md#infoplist-updates) and your [App Delegate](README.md#). Also supported is 3D Touch preview from product lists, category list, and purchase history.
+- User Interface improvements.
+
 ## v1.8.6 – December 16, 2015
 - Fixes bug where subcategory product lists would not load properly. This is related to AFNetworking v2.6.0's update to where they no longer encode / and ? characters in query parameters in GET requests.
 
