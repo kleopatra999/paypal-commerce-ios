@@ -177,6 +177,7 @@ PayPal Commerce uses a login system that eschews passwords in favor of an email-
 You can get your URL scheme from the [Commerce Panel -> Advanced -> iOS SDK](https://commerce.paypal.com/sdk/ios). Then, add your URL scheme to your project:
 
 1. In `Xcode`, select your Target.
+1. Select `Info`.
 1. Under `URL Types`, add a new type (`+` button).
 1. In the `URL Scheme` field, enter the scheme provided by PayPal Commerce (e.g., `pypl-acme-shovels`).
 
