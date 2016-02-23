@@ -75,6 +75,7 @@ If you are using a tab bar controller to present the shop to your users, or if y
 In order for your customers to use Apple Pay, you'll need to take care of a few things:
 
 1. Create your Apple Pay merchant ID and certificate in the [Apple Developer Member Center](https://developer.apple.com/account/overview.action).
+1. Enable Apple Pay in the [PayPal Commerce Panel](https://commerce.paypal.com/gateways).
 1. Update your project to use Apple Pay (under your Target -> Capabilities -> Apple Pay).
 1. In your app delegate, configure your Apple Pay merchant ID:
 
