@@ -70,6 +70,18 @@ Within `application:didFinishLaunchingWithOptions:`:
 
 If you are using a tab bar controller to present the shop to your users, or if you are presenting modally & would like to be notified of transitions, please [implement the `ModestStoreDelegate`](docs/delegate.md).
 
+#### Apple Pay
+
+In order for your customers to use Apple Pay, you'll need to take care of a few things:
+
+1. Create your Apple Pay merchant ID and certificate in the [Apple Developer Member Center](https://developer.apple.com/account/overview.action).
+1. Update your project to use Apple Pay (under your Target -> Capabilities -> Apple Pay).
+1. In your app delegate, configure your Apple Pay merchant ID:
+
+    ```objc
+    [ModestStoreSDK configureApplePayMerchantID:@"merchant.com."];
+    ```
+
 #### Info.plist Updates
 In your app's `Info.plist`, please make the following changes:
 - `UIViewControllerBasedStatusBarAppearance` allows us to show & hide the status bar as needed.
