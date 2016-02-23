@@ -32,6 +32,16 @@
     [ModestStoreSDK configureWithClientID:clientId clientSecret:clientSecret launchOptions:launchOptions];
     [ModestStoreSDK presentStoreApp];
 
+#warning Please configure Apple Pay if you would like to enable it for your customers.
+    /**
+     Make sure to
+     1. Setup Apple Pay in the Apple Developer Member Center.
+     2. Add your merchant ID to your project.
+     3. Configure your Apple Pay merchant ID here.
+     */
+//    NSString *applePayMerchantID = @"";
+//    [ModestStoreSDK configureApplePayMerchantID:applePayMerchantID];
+
     return YES;
 
 }
