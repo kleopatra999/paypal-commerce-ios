@@ -45,8 +45,8 @@
     
     // the good stuff! let's configure modest!
     // we're defaulting to a sample store,
-    // but you should replace these with your own credentials from panel.modest.com
-#warning Please obfuscate the client id & secret before shipping. Thanks! –modest
+    // but you should replace these with your own credentials from commerce.paypal.com
+#warning Please obfuscate the client id & secret before shipping. Thanks! -paypal commerce
     NSString *clientId = @"9mclWAIlTRKemRLrfMlsyg";
     NSString *clientSecret = @"-FekZqjxRLWrIhIIib1MVQaqu3gAdATWarVFCmiQ8VdA";
     

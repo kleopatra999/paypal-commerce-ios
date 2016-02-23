@@ -53,7 +53,7 @@
 
 ## v1.6 – July 2, 2015
 - PayPal support.
-- You can choose your own category images now at https://panel.modest.com/categories, plus modify their focal points so we auto-crop the images better.
+- You can choose your own category images now at https://commerce.paypal.com/categories, plus modify their focal points so we auto-crop the images better.
 - Improved SDK documentation.
 - Automatically hides empty categories.
 - Reduced New Relic logging.
@@ -67,7 +67,7 @@
 - Upon configuring the Modest client, we will check your configuration (on a background thread). If anything is awry, we will display an alert in the app & print out details in the console. If you're on the Simulator, we'll throw an exception to drive home the point.
 - Deep-linked URLs now work. Check out docs/url_specs.md for specs.
 - Users can now buy more than one of a product by setting its quantity from the product detail view.
-- Modest now supports phone number collection. You can configure this in the Control Panel at panel.modest.com.
+- Modest now supports phone number collection. You can configure this in the Control Panel at commerce.paypal.com.
 - Redesigned search UI. Users can now search within categories.
 
 ## v1.4 – May 5, 2015
