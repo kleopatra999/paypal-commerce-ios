@@ -13,6 +13,7 @@ Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want t
 ## Table of Contents    
 - [Communication](#communication)
 - [Requirements](#requirements)
+- [Example Projects](#example-projects)
 - [Quick Installation](#quick-installation)
 - [Configure the Client](#configure-the-client)
 - [Present the Store](#present-the-store)
