@@ -28,8 +28,14 @@ Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want t
 
 
 ## Requirements
-PayPal Commerce supports iOS 7.0-9.1, which can be run on iPhone 4 & up, iPod Touch 5th gen & up, and iPad 2 & up. We suggest using the latest version of Xcode.
+PayPal Commerce supports iOS 7.0-9.2, which can be run on iPhone 4 & up, iPod Touch 5th gen & up, and iPad 2 & up. We suggest using the latest version of Xcode.
 
+
+## Example Projects
+We have provided three [example projects](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects) to illustrate how the PayPal Commerce SDK can fit into your project:
+- [Shop](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects/Shop) is a standalone shop. This is good if you just want your users to be able to us the app to shop.
+- [ModalShop](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects/ModalShop) illustrates an app where the shop interface is presented modally to the user.
+- [TabBarShop](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects/TabBarShop) illustrates an app where the shop interface is presented in a tab bar controlled by the "parent app."
 
 
 ## Quick Installation
