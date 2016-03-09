@@ -18,7 +18,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    application.statusBarStyle = UIStatusBarStyleLightContent;
     
     //general app setup stuff
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -27,9 +26,6 @@
     
     ViewController *viewController = [[ViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    navigationController.navigationBar.tintColor = [UIColor colorWithRed:218/255.0 green:168/255.0 blue:216/255.0 alpha:1];
-    navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     [self.window setRootViewController:navigationController];
     
     
