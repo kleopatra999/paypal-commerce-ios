@@ -94,7 +94,7 @@
         //here we're showing a basic product cell within this content.
         //  put in a search term here that makes sense for your store
         MDSTProductCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.adCellReuseID];
-        NSArray *terms = @[@"tote", @"shirt", @"poster"];
+        NSArray *terms = @[@"manchester", @"buckle", @"shoe"];
         NSUInteger randomIdx = arc4random() % terms.count;
         NSString *term = terms[randomIdx];
         [cell loadProductWithSearchTerm:term completion:nil];

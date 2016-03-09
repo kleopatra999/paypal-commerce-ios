@@ -18,7 +18,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    application.statusBarStyle = UIStatusBarStyleLightContent;
     
     //general app setup stuff
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -27,19 +26,16 @@
     
     ViewController *viewController = [[ViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    navigationController.navigationBar.tintColor = [UIColor colorWithRed:218/255.0 green:168/255.0 blue:216/255.0 alpha:1];
-    navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     [self.window setRootViewController:navigationController];
     
     
     
     // the good stuff! let's configure modest!
     // we're defaulting to a sample store,
-    // but you should replace these with your own credentials from panel.modest.com
-#warning Please obfuscate the client id & secret before shipping. Thanks! –modest
-    NSString *clientId = @"szR3tzV7R8uHewihFeSghA";
-    NSString *clientSecret = @"sx7X72MQQnOMlu-wTbUgzQOcuwcAI_Qni6AhAnGYI_qw";
+    // but you should replace these with your own credentials from commerce.paypal.com
+#warning Please obfuscate the client id & secret before shipping. Thanks! -paypal commerce
+    NSString *clientId = @"iMqZE6a0RYCG1eQQJcIyLw";
+    NSString *clientSecret = @"SksO9FxCQXSHT4ZqXTk7UgWUY3lN6HSYe5wmyRfmC5pg";
     
     if(!clientId || !clientSecret){
         [NSException raise:@"ModestException" format:@"Missing client id + secret"];
@@ -47,6 +43,16 @@
     }
     
     [ModestStoreSDK configureWithClientID:clientId clientSecret:clientSecret launchOptions:launchOptions];
+    
+#warning Please configure Apple Pay if you would like to enable it for your customers.
+    /**
+     Make sure to
+     1. Setup Apple Pay in the Apple Developer Member Center.
+     2. Add your merchant ID to your project.
+     3. Configure your Apple Pay merchant ID here.
+     */
+//    NSString *applePayMerchantID = @"";
+//    [ModestStoreSDK configureApplePayMerchantID:applePayMerchantID];
     
     return YES;
 
@@ -77,6 +83,15 @@
 }
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
     [ModestStoreSDK didReceiveRemoteNotification:userInfo];
+}
+
+// In order for Home Screen 3D Touch actions to work properly in iOS 9+ on supported devices:
+-(void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
+    BOOL didPerformAction = [ModestStoreSDK performActionForShortcutItem:shortcutItem];
+    if(!didPerformAction){
+        //if you added any custom 3D Touch shortcuts, you can handle them here
+    }
+    completionHandler(didPerformAction);
 }
 
 @end

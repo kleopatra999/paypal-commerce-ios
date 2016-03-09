@@ -13,6 +13,7 @@ Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want t
 ## Table of Contents    
 - [Communication](#communication)
 - [Requirements](#requirements)
+- [Example Projects](#example-projects)
 - [Quick Installation](#quick-installation)
 - [Configure the Client](#configure-the-client)
 - [Present the Store](#present-the-store)
@@ -28,8 +29,14 @@ Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want t
 
 
 ## Requirements
-PayPal Commerce supports iOS 7.0-9.1, which can be run on iPhone 4 & up, iPod Touch 5th gen & up, and iPad 2 & up. We suggest using the latest version of Xcode.
+PayPal Commerce supports iOS 7.0-9.2, which can be run on iPhone 4 & up, iPod Touch 5th gen & up, and iPad 2 & up. We suggest using the latest version of Xcode.
 
+
+## Example Projects
+We have provided three [example projects](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects) to illustrate how the PayPal Commerce SDK can fit into your project:
+- [Shop](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects/Shop) is a standalone shop. This is good if you just want your users to be able to us the app to shop.
+- [ModalShop](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects/ModalShop) illustrates an app where the shop interface is presented modally to the user.
+- [TabBarShop](https://github.com/braintree/paypal-commerce-ios/tree/master/ExampleProjects/TabBarShop) illustrates an app where the shop interface is presented in a tab bar controlled by the "parent app."
 
 
 ## Quick Installation
@@ -70,11 +77,25 @@ Within `application:didFinishLaunchingWithOptions:`:
 
 If you are using a tab bar controller to present the shop to your users, or if you are presenting modally & would like to be notified of transitions, please [implement the `ModestStoreDelegate`](docs/delegate.md).
 
+#### Apple Pay
+
+In order for your customers to use Apple Pay, you'll need to take care of a few things:
+
+1. Create your Apple Pay merchant ID and certificate in the [Apple Developer Member Center](https://developer.apple.com/account/overview.action).
+1. Enable Apple Pay in the [PayPal Commerce Panel](https://commerce.paypal.com/gateways).
+1. Update your project to use Apple Pay (under your Target -> Capabilities -> Apple Pay).
+1. In your app delegate, configure your Apple Pay merchant ID:
+
+    ```objc
+    [ModestStoreSDK configureApplePayMerchantID:@"merchant.com."];
+    ```
+
 #### Info.plist Updates
 In your app's `Info.plist`, please make the following changes:
 - `UIViewControllerBasedStatusBarAppearance` allows us to show & hide the status bar as needed.
 - `NSAppTransportSecurity` allows us to securely communicate with Cloudfront & Facebook in iOS 9+. Modest communicates over `https`, but we using loggly.com for internal API logging, which currently require the `forward secrecy` exception. (We expect this to change soon).
 - `LSApplicationQueriesSchemes` is needed for Facebook & PayPal to work properly in iOS 9+.
+- `UIApplicationShortcutItems` is needed to support 3D Touch from the Home Screen App Icon on iPhone 6s & 6s Plus.
 
 Updates:
 ```xml
@@ -123,7 +144,35 @@ Updates:
 		<string>com.paypal.ppclient.touch.v1</string>
 		<string>com.paypal.ppclient.touch.v2</string>
 		<string>org-appextension-feature-password-management</string>
+		<string>instagram</string>
 	</array>
+        <key>UIApplicationShortcutItems</key>
+        <array>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeHome</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Shop</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.home</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeSearch</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Search</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.search</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeTime</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Purchases</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.order-history</string>
+            </dict>
+        </array>
 ```
 
 #### Custom URL Scheme for User Login
@@ -135,6 +184,7 @@ PayPal Commerce uses a login system that eschews passwords in favor of an email-
 You can get your URL scheme from the [Commerce Panel -> Advanced -> iOS SDK](https://commerce.paypal.com/sdk/ios). Then, add your URL scheme to your project:
 
 1. In `Xcode`, select your Target.
+1. Select `Info`.
 1. Under `URL Types`, add a new type (`+` button).
 1. In the `URL Scheme` field, enter the scheme provided by PayPal Commerce (e.g., `pypl-acme-shovels`).
 
@@ -182,6 +232,18 @@ In order for products in the end-users' spotlight search to open the app in the 
 }
 ```
 
+#### iPhone 6s/6s Plus 3D Touch
+
+In order for your users to be able to open the app from the Home Screen App Icon's 3D Touch menu, you'll need to add this to your App Delegate:
+```objc
+-(void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
+    BOOL didPerformAction = [ModestStoreSDK performActionForShortcutItem:shortcutItem];
+    if(!didPerformAction){
+        //if you added any custom 3D Touch shortcuts, you can handle them here
+    }
+    completionHandler(didPerformAction);
+}
+```
 
 #### Facebook Login
 

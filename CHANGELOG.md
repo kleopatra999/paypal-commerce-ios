@@ -1,5 +1,15 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v1.9 – March 9, 2016
+- Modest is now PayPal Commerce! Check us out at https://paypal.com/commerce
+- Please be sure to update your Podfile to use the new repo URL: `pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'`
+- Apple Pay merchant IDs are now configured in code – you can configure yours via adding `[ModestStoreSDK configureApplePayMerchantID:@"merchant.com."]` to your app delegate.
+- Braintree’s V.zero integration adds increased security for your customers’ credit cards.
+- Within your App Transport Security section of your Info.plist, you can now remove the entry for “Cloudfront.net”, and add in one for “loggly.com”. Get the details at [Info.plist](README.md#infoplist-updates).
+- Now supports 3D Touch on the Home Screen, but it requires you to update your [Info.plist](README.md#infoplist-updates) and your [App Delegate](README.md#). Also supported is 3D Touch preview from product lists, category list, and purchase history.
+- User Interface improvements.
+- For Instagram sharing to work properly, please update your [Info.plist](README.md#infoplist-updates).
+
 ## v1.8.6 – December 16, 2015
 - Fixes bug where subcategory product lists would not load properly. This is related to AFNetworking v2.6.0's update to where they no longer encode / and ? characters in query parameters in GET requests.
 
@@ -44,7 +54,7 @@
 
 ## v1.6 – July 2, 2015
 - PayPal support.
-- You can choose your own category images now at https://panel.modest.com/categories, plus modify their focal points so we auto-crop the images better.
+- You can choose your own category images now at https://commerce.paypal.com/categories, plus modify their focal points so we auto-crop the images better.
 - Improved SDK documentation.
 - Automatically hides empty categories.
 - Reduced New Relic logging.
@@ -58,7 +68,7 @@
 - Upon configuring the Modest client, we will check your configuration (on a background thread). If anything is awry, we will display an alert in the app & print out details in the console. If you're on the Simulator, we'll throw an exception to drive home the point.
 - Deep-linked URLs now work. Check out docs/url_specs.md for specs.
 - Users can now buy more than one of a product by setting its quantity from the product detail view.
-- Modest now supports phone number collection. You can configure this in the Control Panel at panel.modest.com.
+- Modest now supports phone number collection. You can configure this in the Control Panel at commerce.paypal.com.
 - Redesigned search UI. Users can now search within categories.
 
 ## v1.4 – May 5, 2015

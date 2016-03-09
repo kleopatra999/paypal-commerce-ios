@@ -17,7 +17,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    application.statusBarStyle = UIStatusBarStyleLightContent;
     
     //general app setup stuff
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -29,9 +28,6 @@
     viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"News" image:[UIImage imageNamed:@"news"] tag:0];
 
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    navigationController.navigationBar.tintColor = [UIColor colorWithRed:218/255.0 green:168/255.0 blue:216/255.0 alpha:1];
-    navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     
     UIViewController *modestViewController = [ModestStoreSDK modestRootViewController];
     //dollar icon by Luboš Volkov from the Noun Project
@@ -45,10 +41,10 @@
     
     // the good stuff! let's configure modest!
     // we're defaulting to a sample store,
-    // but you should replace these with your own credentials from panel.modest.com
-#warning Please obfuscate the client id & secret before shipping. Thanks! –modest
-    NSString *clientId = @"9mclWAIlTRKemRLrfMlsyg";
-    NSString *clientSecret = @"-FekZqjxRLWrIhIIib1MVQaqu3gAdATWarVFCmiQ8VdA";
+    // but you should replace these with your own credentials from commerce.paypal.com
+#warning Please obfuscate the client id & secret before shipping. Thanks! -paypal commerce
+    NSString *clientId = @"8DmIY2hKQemOaift4FTt3Q";
+    NSString *clientSecret = @"s5qxKZPQTZu05lvSJKfsKA48Rt2onnTHefS6FgbIBapQ";
     
     if(!clientId || !clientSecret){
         [NSException raise:@"ModestException" format:@"Missing client id + secret"];
@@ -58,6 +54,16 @@
     [ModestStoreSDK setDelegate:self];
     [ModestStoreSDK configureWithClientID:clientId clientSecret:clientSecret launchOptions:launchOptions];
     
+#warning Please configure Apple Pay if you would like to enable it for your customers.
+    /** 
+     Make sure to
+     1. Setup Apple Pay in the Apple Developer Member Center.
+     2. Add your merchant ID to your project.
+     3. Configure your Apple Pay merchant ID here.
+     */
+//    NSString *applePayMerchantID = @"";
+//    [ModestStoreSDK configureApplePayMerchantID:applePayMerchantID];
+
     return YES;
     
 }
@@ -92,6 +98,15 @@
 //use this if you're using a tab bar controller to present the Modest Store to your users
 -(void)modestStoreShouldBeVisible{
     self.tabBarController.selectedIndex = 1;
+}
+
+// In order for Home Screen 3D Touch actions to work properly in iOS 9+ on supported devices:
+-(void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
+    BOOL didPerformAction = [ModestStoreSDK performActionForShortcutItem:shortcutItem];
+    if(!didPerformAction){
+        //if you added any custom 3D Touch shortcuts, you can handle them here
+    }
+    completionHandler(didPerformAction);
 }
 
 @end
