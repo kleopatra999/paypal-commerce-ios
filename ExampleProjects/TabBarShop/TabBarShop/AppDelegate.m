@@ -17,7 +17,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    application.statusBarStyle = UIStatusBarStyleLightContent;
     
     //general app setup stuff
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -29,9 +28,6 @@
     viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"News" image:[UIImage imageNamed:@"news"] tag:0];
 
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-//    navigationController.navigationBar.barTintColor = [UIColor blackColor];
-//    navigationController.navigationBar.tintColor = [UIColor colorWithRed:218/255.0 green:168/255.0 blue:216/255.0 alpha:1];
-//    navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     
     UIViewController *modestViewController = [ModestStoreSDK modestRootViewController];
     //dollar icon by Luboš Volkov from the Noun Project
