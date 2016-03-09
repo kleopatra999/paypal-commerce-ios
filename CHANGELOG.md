@@ -1,6 +1,6 @@
 # PayPal Commerce iOS SDK Changelog
 
-## v1.9 – February 2016
+## v1.9 – March 9, 2016
 - Modest is now PayPal Commerce! Check us out at https://paypal.com/commerce
 - Apple Pay merchant IDs are now configured in code – you can configure yours via adding `[ModestStoreSDK configureApplePayMerchantID:@"merchant.com."]` to your app delegate.
 - Braintree’s V.zero integration adds increased security for your customers’ credit cards.
