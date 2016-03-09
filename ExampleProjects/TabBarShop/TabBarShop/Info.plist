@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>mdst-tab-bar-shop</string>
+				<string>pypl-public-sdk-tab-bar-demo-app</string>
 			</array>
 		</dict>
 	</array>

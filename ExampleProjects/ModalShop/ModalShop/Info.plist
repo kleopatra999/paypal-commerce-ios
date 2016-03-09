@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>mdst-modal-shop</string>
+				<string>pypl-public-sdk-modal-demo-app</string>
 			</array>
 		</dict>
 	</array>

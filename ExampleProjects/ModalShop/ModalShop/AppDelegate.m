@@ -38,8 +38,8 @@
     // we're defaulting to a sample store,
     // but you should replace these with your own credentials from commerce.paypal.com
 #warning Please obfuscate the client id & secret before shipping. Thanks! -paypal commerce
-    NSString *clientId = @"szR3tzV7R8uHewihFeSghA";
-    NSString *clientSecret = @"sx7X72MQQnOMlu-wTbUgzQOcuwcAI_Qni6AhAnGYI_qw";
+    NSString *clientId = @"iMqZE6a0RYCG1eQQJcIyLw";
+    NSString *clientSecret = @"SksO9FxCQXSHT4ZqXTk7UgWUY3lN6HSYe5wmyRfmC5pg";
     
     if(!clientId || !clientSecret){
         [NSException raise:@"ModestException" format:@"Missing client id + secret"];
