@@ -33,6 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)configureWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret remoteNotification:(nullable NSDictionary *)remoteNotification;
 
 
+/** Configure Apple Pay Merchant ID. 
+    Note that only certain payment gateways are supported, so you'll also need to enable Apple Pay on the PayPal Commerce Control Panel (https://commerce.paypal.com/)
+*/
++(void)configureApplePayMerchantID:(nullable NSString *)merchantID;
 
 
 #pragma mark - Integration
@@ -62,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
           [ModestStoreSDK openURL:url sourceApplication:sourceApplication annotation:annotation];
           return YES;
       }
-    We will only look at URLs prefixed by "mdst" and "fb" */
+    We will only look at URLs prefixed by "mdst", "pypl", and "fb" */
 + (void)openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(nullable id)annotation;
 
 
@@ -98,6 +102,47 @@ Please override this in your App Delegate:
     }
 */
 +(void)continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray *restorableObjects))restorationHandler;
+
+
+/** In order for Home Screen 3D Touch actions to work properly in iOS 9+ on supported devices, please add this to your App Delegate:
+    -(void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
+        BOOL didPerformAction = [ModestStoreSDK performActionForShortcutItem:shortcutItem];
+        if(!didPerformAction){
+            //if you added any custom 3D Touch shortcuts, you can handle them here
+        }
+        completionHandler(didPerformAction);
+    }
+ 
+    You'll also need to update your Info.plist with:
+        <key>UIApplicationShortcutItems</key>
+        <array>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeHome</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Shop</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.home</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeSearch</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Search</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.search</string>
+            </dict>
+            <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeTime</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Purchases</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>com.modest.sdk.order-history</string>
+            </dict>
+        </array>
+ */
++(BOOL)performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem;
 
 
 
