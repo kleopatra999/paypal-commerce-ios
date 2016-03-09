@@ -92,6 +92,8 @@ THE SOFTWARE.
     ss.dependency 'ECSlidingViewController', '~> 2.0'
     ss.dependency 'libPhoneNumber-iOS', '~> 0.8'
     ss.dependency 'LogglyLogger-CocoaLumberjack', '~> 2.0'
+    ss.dependency 'Braintree/Core', '~> 4.0'
+    ss.dependency 'Braintree/Card', '~> 4.0'
   end
 
   s.default_subspecs = 'Core'
