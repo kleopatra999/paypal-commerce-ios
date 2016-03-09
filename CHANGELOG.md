@@ -2,6 +2,7 @@
 
 ## v1.9 – March 9, 2016
 - Modest is now PayPal Commerce! Check us out at https://paypal.com/commerce
+- Please be sure to update your Podfile to use the new repo URL: `pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'`
 - Apple Pay merchant IDs are now configured in code – you can configure yours via adding `[ModestStoreSDK configureApplePayMerchantID:@"merchant.com."]` to your app delegate.
 - Braintree’s V.zero integration adds increased security for your customers’ credit cards.
 - Within your App Transport Security section of your Info.plist, you can now remove the entry for “Cloudfront.net”, and add in one for “loggly.com”. Get the details at [Info.plist](README.md#infoplist-updates).
