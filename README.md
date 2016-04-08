@@ -10,7 +10,7 @@ For the basics of getting up & running, read the [Launch Checklist](docs/launch_
 Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want to visit the [PayPal iOS SDK](https://github.com/paypal/PayPal-iOS-SDK) repo.
 
 
-## Table of Contents    
+## Table of Contents
 - [Communication](#communication)
 - [Requirements](#requirements)
 - [Example Projects](#example-projects)
@@ -63,15 +63,15 @@ In your app delegate:
 #import <ModestStoreSDK/ModestStoreSDK.h>
 ```
 
-Use the Client ID & Secret you created above. 
+Use the Client ID & Secret you created above.
 
-##### You must obfuscate the client id & secret somehow (this protects your store and your customers). 
+##### You must obfuscate the client id & secret somehow (this protects your store and your customers).
 
 Within `application:didFinishLaunchingWithOptions:`:
 
 ```objc
-[ModestStoreSDK configureWithClientID:@"client-id" 
-                         clientSecret:@"client-secret" 
+[ModestStoreSDK configureWithClientID:@"client-id"
+                         clientSecret:@"client-secret"
                         launchOptions:launchOptions];
 ```
 
@@ -179,7 +179,7 @@ Updates:
 
 PayPal Commerce uses a login system that eschews passwords in favor of an email-based login flow. New users will be let in immediately. However, if a returning user attempts to log into your shop, we will send them an email with a login link, and in the app we will display a message requesting they open their email to tap that link, which will have the custom URL scheme that's unique to your app. Tapping the link will open your app, PayPal Commerce will verify their email address, and they will be able to continue shopping.
 
-##### In order for this flow to work properly, please add the custom URL scheme for PayPal Commerce. 
+##### In order for this flow to work properly, please add the custom URL scheme for PayPal Commerce.
 
 You can get your URL scheme from the [Commerce Panel -> Advanced -> iOS SDK](https://commerce.paypal.com/sdk/ios). Then, add your URL scheme to your project:
 
@@ -251,7 +251,7 @@ If you'd like to enable Facebook login, please [follow the instructions here](do
 
 ## Present the Store
 
-There are three types of apps you might be creating. 
+There are three types of apps you might be creating.
 
 #### Modal Presentation
 The most popular approach is to present the store modally. Use this method wherever you want the store presented, typically from a button or some other user action.
