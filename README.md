@@ -287,7 +287,7 @@ Finally, if you want *just* the store as an app, without anything else, you can 
 
 
 ## Multiple iOS Apps per Store
-If you are building multiple iOS apps that will interact with one PayPal Commerce store, then you'll need to set up multiple OAuth clients. This is necessary to keep our email verification system functional. In the PayPal Commerce Panel, there's a section called `Advanced`, and under that is `iOS SDK` ([commerce.paypal.com/sdk/ios](https://commerce.paypal.com/channels/ios/sdk)). There you will see your primary OAuth client, as well as a space to add more. Each will provide you with your PayPal Commerce URL scheme, as well as its own client id & secret. Checkout [Configuring the Client](#configure-the-client) for more on where to put those items.
+If you are building multiple iOS apps that will interact with one PayPal Commerce store, then you'll need to set up multiple OAuth clients. This is necessary to keep our email verification system functional. In the PayPal Commerce Panel, there's a section called `Channels`, and under that is `iOS SDK` ([commerce.paypal.com/sdk/ios](https://commerce.paypal.com/channels/ios/sdk)). There you will see your primary OAuth client, as well as a space to add more. Each will provide you with your PayPal Commerce URL scheme, as well as its own client id & secret. Checkout [Configuring the Client](#configure-the-client) for more on where to put those items.
 
 
 ## More
