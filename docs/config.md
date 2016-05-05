@@ -1,6 +1,6 @@
 # Initial Theming + Configuration
 
-Most of these values will be overridden by what you have set up in the [Theming section](https://commerce.paypal.com/theme) of the PayPal Commerce Panel, but by including the `Modest-Config.plist` & `Modest-Assets.xcassets`, you can include an initial setup. 
+Most of these values will be overridden by what you have set up in the [Theming section](https://commerce.paypal.com/settings/theme) of the PayPal Commerce Panel, but by including the `Modest-Config.plist` & `Modest-Assets.xcassets`, you can include an initial setup. 
 
 This is optional.
 
@@ -16,7 +16,7 @@ This is optional.
   - `medium_font`
   - `bold_font`
 - `enable_barcode_scanning`: BOOL that allows the app to scan barcodes & QR codes. 
-- `colors`: A dictionary of colors we use in the app. Colors are denoted as hex values (e.g, “#0FA0FA”). They will be dynamically updated based on the settings in your theme in the [Control Panel](https://commerce.paypal.com/theme).
+- `colors`: A dictionary of colors we use in the app. Colors are denoted as hex values (e.g, “#0FA0FA”). They will be dynamically updated based on the settings in your theme in the [Control Panel](https://commerce.paypal.com/settings/theme).
 	   1. `primary_button_color`: Onboarding button background, “continue shopping” buttons.
 	   1. `accent_color`: Used in product detail, variant selection, receipts, etc as a way to highlight certain elements.
 	   1. `buy_button_color`: Buy button background color.

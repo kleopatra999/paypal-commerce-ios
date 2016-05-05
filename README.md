@@ -54,7 +54,7 @@ If you'd like to manage the installation on your own, you can find download link
 
 ## Configure the Client
 #### Create an OAuth Client
-Add your app to the [PayPal Commerce Panel](https://commerce.paypal.com/sdk/ios) and copy your `Client ID` & `Secret`. You'll use these to configure the SDK.
+Add your app to the [PayPal Commerce Panel](https://commerce.paypal.com/channels/ios/sdk) and copy your `Client ID` & `Secret`. You'll use these to configure the SDK.
 
 #### Add ModestStoreSDK to Your App Delegate
 In your app delegate:
@@ -82,7 +82,7 @@ If you are using a tab bar controller to present the shop to your users, or if y
 In order for your customers to use Apple Pay, you'll need to take care of a few things:
 
 1. Create your Apple Pay merchant ID and certificate in the [Apple Developer Member Center](https://developer.apple.com/account/overview.action).
-1. Enable Apple Pay in the [PayPal Commerce Panel](https://commerce.paypal.com/gateways).
+1. Enable Apple Pay in the [PayPal Commerce Panel](https://commerce.paypal.com/settings/gateways).
 1. Update your project to use Apple Pay (under your Target -> Capabilities -> Apple Pay).
 1. In your app delegate, configure your Apple Pay merchant ID:
 
@@ -181,7 +181,7 @@ PayPal Commerce uses a login system that eschews passwords in favor of an email-
 
 ##### In order for this flow to work properly, please add the custom URL scheme for PayPal Commerce.
 
-You can get your URL scheme from the [Commerce Panel -> Advanced -> iOS SDK](https://commerce.paypal.com/sdk/ios). Then, add your URL scheme to your project:
+You can get your URL scheme from the [Commerce Panel -> Advanced -> iOS SDK](https://commerce.paypal.com/channels/ios/sdk). Then, add your URL scheme to your project:
 
 1. In `Xcode`, select your Target.
 1. Select `Info`.
@@ -287,7 +287,7 @@ Finally, if you want *just* the store as an app, without anything else, you can 
 
 
 ## Multiple iOS Apps per Store
-If you are building multiple iOS apps that will interact with one PayPal Commerce store, then you'll need to set up multiple OAuth clients. This is necessary to keep our email verification system functional. In the PayPal Commerce Panel, there's a section called `Advanced`, and under that is `iOS SDK` ([commerce.paypal.com/sdk/ios](https://commerce.paypal.com/sdk/ios)). There you will see your primary OAuth client, as well as a space to add more. Each will provide you with your PayPal Commerce URL scheme, as well as its own client id & secret. Checkout [Configuring the Client](#configure-the-client) for more on where to put those items.
+If you are building multiple iOS apps that will interact with one PayPal Commerce store, then you'll need to set up multiple OAuth clients. This is necessary to keep our email verification system functional. In the PayPal Commerce Panel, there's a section called `Channels`, and under that is `iOS SDK` ([commerce.paypal.com/sdk/ios](https://commerce.paypal.com/channels/ios/sdk)). There you will see your primary OAuth client, as well as a space to add more. Each will provide you with your PayPal Commerce URL scheme, as well as its own client id & secret. Checkout [Configuring the Client](#configure-the-client) for more on where to put those items.
 
 
 ## More

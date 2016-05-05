@@ -1,6 +1,6 @@
 # URL Specs
 
-You will need to use the PayPal Commerce URL scheme on all URLs. For example, if your app is "Acme", your URL scheme might be `pypl-acme://` (you can get your url scheme on the [Control Panel](https://commerce.paypal.com/sdk/ios).
+You will need to use the PayPal Commerce URL scheme on all URLs. For example, if your app is "Acme", your URL scheme might be `pypl-acme://` (you can get your url scheme on the [Control Panel](https://commerce.paypal.com/channels/ios/sdk).
 
 ## Product
 Link directly to a product detail view.
