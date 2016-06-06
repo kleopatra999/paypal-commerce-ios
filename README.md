@@ -1,4 +1,4 @@
-[![PayPal Commerce](screenshots/pp_commerce_logo.png)](https://commerce.paypal.com/)
+[![PayPal Commerce](assets/pp_commerce_logo.png)](https://commerce.paypal.com/)
 
 PayPal Commerce is currently in closed beta. Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).
 
