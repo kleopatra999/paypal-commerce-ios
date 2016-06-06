@@ -1,6 +1,6 @@
 [![PayPal Commerce](assets/pp_commerce_logo.png)](https://commerce.paypal.com/)
 
-PayPal Commerce is currently in closed beta. Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).
+**PayPal Commerce is currently in closed beta. Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).**
 
 You can read our [full documentation on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview).
 
