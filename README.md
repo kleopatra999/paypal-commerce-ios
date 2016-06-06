@@ -1,7 +1,7 @@
 [![PayPal Commerce](assets/pp_commerce_logo.png)](https://commerce.paypal.com/)
 
 # PayPal Commerce iOS SDK
-**PayPal Commerce is currently in closed beta. Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).**
+**PayPal Commerce is currently in closed beta.** Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).
 
 You can read [documentation for the PayPal Commerce iOS SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview).
 
