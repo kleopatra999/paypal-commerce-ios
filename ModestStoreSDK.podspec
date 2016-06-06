@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
-  s.name         = "ModestStoreSDK"
-  s.version      = "1.9"
+  s.name         = "PayPalCommerce"
+  s.version      = "1.10-beta"
   s.summary      = "PayPal Commerce SDK"
   s.homepage     = "https://commerce.paypal.com/"
 
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license = {
     "type" => "Commercial",
     "text" => <<-LICENSE
-                  Copyright © 2015 PayPal, Inc.
+                  Copyright © 2016 PayPal, Inc.
                   All rights reserved.
 
                     PaymentKit from Stripe
