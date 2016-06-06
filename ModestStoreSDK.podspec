@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "PayPalCommerce"
+  s.name         = "ModestStoreSDK"
   s.version      = "1.10-beta"
   s.summary      = "PayPal Commerce SDK"
   s.homepage     = "https://commerce.paypal.com/"
