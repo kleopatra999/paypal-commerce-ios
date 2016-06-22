@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ModestStoreSDK"
-  s.version      = "1.10-beta"
+  s.version      = "1.10.0-beta"
   s.summary      = "PayPal Commerce SDK"
   s.homepage     = "https://commerce.paypal.com/"
 
@@ -75,7 +75,7 @@ THE SOFTWARE.
 
   s.requires_arc    = true
   
-  s.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "1.9" }
+  s.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "1.10.0-beta" }
 
   s.source_files    = "ModestStoreSDK/*.h"
   s.public_header_files = "ModestStoreSDK/*.h"
