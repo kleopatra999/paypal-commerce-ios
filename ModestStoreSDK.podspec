@@ -75,19 +75,19 @@ THE SOFTWARE.
 
   s.requires_arc    = true
   
+  s.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "1.9" }
+
+  s.source_files    = "ModestStoreSDK/*.h"
+  s.public_header_files = "ModestStoreSDK/*.h"
+  s.preserve_paths  = "ModestStoreSDK/*.a"
+  s.xcconfig        =  { 'OTHER_LDFLAGS' => '-all_load', 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ModestStoreSDK/ModestStoreSDK' }
+  s.library         = 'ModestStoreSDK'
+
+  s.resource_bundle = { 'ModestResources' => 'ModestStoreSDK/ModestResources/*' }
+
+  s.weak_frameworks = "PassKit", "WebKit";
+
   s.subspec 'Core' do |ss|
-    ss.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "1.9" }
-
-    ss.source_files    = "ModestStoreSDK/*.h"
-    ss.public_header_files = "ModestStoreSDK/*.h"
-    ss.preserve_paths  = "ModestStoreSDK/*.a"
-    ss.xcconfig        =  { 'OTHER_LDFLAGS' => '-all_load', 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ModestStoreSDK/ModestStoreSDK' }
-    ss.library         = 'ModestStoreSDK'
-
-    ss.resource_bundle = { 'ModestResources' => 'ModestStoreSDK/ModestResources/*' }
-
-    ss.weak_frameworks = "PassKit", "WebKit";
-
     ss.dependency "Mantle", "~> 1.5"
     ss.dependency "AFNetworking", "~> 2.6"
     ss.dependency "FBSDKLoginKit", '~> 4.6'
