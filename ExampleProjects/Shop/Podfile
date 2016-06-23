@@ -2,11 +2,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, "7.0"
 
-link_with 'Shop'
-
 pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'
+target 'Shop'
 
 post_install do |generate|
    require 'fileutils'
-   FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-acknowledgements.plist', 'Shop/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+   FileUtils.cp_r('Pods/Target Support Files/Pods-Shop/Pods-Shop-acknowledgements.plist', 'Shop/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
 end
