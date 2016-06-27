@@ -1,5 +1,13 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v1.10.0-beta – June 27, 2016
+- We now support CocoaPods v1.0+!
+- Users can now logout in the Profile. SDK developers can now programmatically log out users as well (for instance, if you have an app-wide logout/reset usage).
+- US-based customers can now enter in their zip code before they onboard to get accurate shipping costs.
+- If the user has entered their zip code or address, they can now select their shipping method before they purchase.
+- The SDK now exposes the ability to search via `sku` – you can either use `+[ModestStoreSDK fetchProductWithSKU:completion:]` or `+[ModestStoreSDK productCardViewWithFrame:productSKU:completion:]`
+- Fixed a bug where we weren't properly tracking push notification interactions / app opens (particularly from a fresh session).
+
 ## v1.9.0 – March 9, 2016
 - Modest is now PayPal Commerce! Check us out at https://paypal.com/commerce
 - Please be sure to update your Podfile to use the new repo URL: `pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'`
