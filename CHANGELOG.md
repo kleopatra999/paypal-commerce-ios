@@ -24,6 +24,12 @@
 ## v1.8.5 – November 17, 2015
 - Fixes bug where 'open shipments' header in the shipments history view wasn't showing up properly in iOS 9+.
 
+## v1.8.4 – Skipped
+
+## v1.8.3 – Skipped
+
+## v1.8.2 – Skipped
+
 ## v1.8.1 – October 29, 2015
 - Updates Apple Pay payment sheet to reflect the app name as the merchant on the 'total' line.
 - Fixes bug where folks could enter the same promo code twice – this was just a display bug. Upon purchase, it would only get applied once.
