@@ -1,6 +1,14 @@
 # PayPal Commerce iOS SDK Changelog
 
-## v1.9 – March 9, 2016
+## v1.10.0-beta – June 27, 2016
+- We now support CocoaPods v1.0+!
+- Users can now logout in the Profile. SDK developers can now programmatically log out users as well (for instance, if you have an app-wide logout/reset usage).
+- US-based customers can now enter in their zip code before they onboard to get accurate shipping costs.
+- If the user has entered their zip code or address, they can now select their shipping method before they purchase.
+- The SDK now exposes the ability to search via `sku` – you can either use `+[ModestStoreSDK fetchProductWithSKU:completion:]` or `+[ModestStoreSDK productCardViewWithFrame:productSKU:completion:]`
+- Fixed a bug where we weren't properly tracking push notification interactions / app opens (particularly from a fresh session).
+
+## v1.9.0 – March 9, 2016
 - Modest is now PayPal Commerce! Check us out at https://paypal.com/commerce
 - Please be sure to update your Podfile to use the new repo URL: `pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'`
 - Apple Pay merchant IDs are now configured in code – you can configure yours via adding `[ModestStoreSDK configureApplePayMerchantID:@"merchant.com."]` to your app delegate.
@@ -20,7 +28,7 @@
 - Updates Apple Pay payment sheet to reflect the app name as the merchant on the 'total' line.
 - Fixes bug where folks could enter the same promo code twice – this was just a display bug. Upon purchase, it would only get applied once.
 
-## v1.8 – October 6, 2015
+## v1.8.0 – October 6, 2015
 - *Important note*: iOS 9 introduces the [App Transport Security policy](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/). In order for Modest to continue to function properly, you'll need to update your [Info.plist](README.md#infoplist-updates). This will allow us to continue to fetch images that we host on Cloudfront, as well as allow your users to continue to login with Facebook.
 - iOS 9 support: Spotlight Search Indexing, Safari View Controller.
     -  For Spotlight Search Indexing to work, please implement in your App Delegate:
@@ -41,7 +49,7 @@
 ## v1.7.1 – September 8, 2015
 - Disables `allowInvalidCertificates` on Simulator, which was conflicting with recent `AFNetworking` updates to cause an error that prevented the SDK from communicating with the Modest API.
 
-## v1.7 – July 30, 2015
+## v1.7.0 – July 30, 2015
 - Support for Activity View Controller – share or perform other actions on your products
 - Polish
 - Added null/nonnull flags for increased interoperability with Swift
@@ -52,7 +60,7 @@
 ## v1.6.1 – July 14, 2015
 - Fixed a bug where if you recently enabled telephone number as a required field, the user could get stuck in a checkout flow.
 
-## v1.6 – July 2, 2015
+## v1.6.0 – July 2, 2015
 - PayPal support.
 - You can choose your own category images now at https://commerce.paypal.com/categories, plus modify their focal points so we auto-crop the images better.
 - Improved SDK documentation.
@@ -64,14 +72,14 @@
 - Fixed a crash that occurred on iOS 8.3 when an existing user who's not currently onboarded in the current app attempts to purchase something through Apple Pay & completes the email verification loop.
 - When choosing an alternate variant after purchase, we'll now show the user negative cost differences, as well as positive cost differences (previously, we only showed positive cost differences, i.e. if the cost was higher).
 
-## v1.5 - June 3, 2015
+## v1.5.0 - June 3, 2015
 - Upon configuring the Modest client, we will check your configuration (on a background thread). If anything is awry, we will display an alert in the app & print out details in the console. If you're on the Simulator, we'll throw an exception to drive home the point.
 - Deep-linked URLs now work. Check out docs/url_specs.md for specs.
 - Users can now buy more than one of a product by setting its quantity from the product detail view.
 - Modest now supports phone number collection. You can configure this in the Control Panel at commerce.paypal.com.
 - Redesigned search UI. Users can now search within categories.
 
-## v1.4 – May 5, 2015
+## v1.4.0 – May 5, 2015
 - Resigned product detail page.
 - New banners on product list pages to inform users of tax, shipping promotions, and current shipment batching timeframes.
 - Updated Facebook SDK to v4, which requires some updates to the Modest SDK integration. Please update your app delegate's url open method to use the following, which is required for Facebook login to continue to work:
@@ -86,7 +94,7 @@
 - Fixed bug where you could get stuck in the UI if you selected Purchases from the sidebar menu, and then unbought your only purchase.
 - Fixed bug where if you selected your profile, and then tried to set Apple Pay as your default payment method, and you had a pre-existing default credit card, and there was an error in the API, then you could get stuck in the UI.
 
-## v1.3 – April 15, 2015
+## v1.3.0 – April 15, 2015
 - Home screen variations (update via the Modest Control Panel)
 - Updated category UI
 
@@ -99,7 +107,7 @@
 ## v1.2.1 – March 30, 2015
 - PassKit is now an explicitly weak framework in the podspec to prevent crashing in iOS 7.
 
-## v1.2 – March 26, 2015
+## v1.2.0 – March 26, 2015
 - Redesigned Categories, Purchase Detail.
 - New inline ‘Tips’ replace the welcome screen.
 - The SDK no longer uses `logo_welcome` or `logo_sidebar`.
@@ -107,7 +115,7 @@
 ## v1.1.1 – February 25, 2015
 - Fixed a display issue in the purchase history where the item cost wasn’t incorporating any discounts (the total cost was still correct).
  
-## v1.1 – February 23, 2015
+## v1.1.0 – February 23, 2015
 - Added support for promo codes.
 - Added support for sale prices.
 - Improved purchase history UI.
@@ -115,7 +123,7 @@
 ## v1.0.1 – February 4, 2015
 - Bug fixes.
 
-## v1.0 – January 26, 2015
+## v1.0.0 – January 26, 2015
 - Lots of bug fixes & UX improvements.
 - Please update `logo_small.imageset` to `logo_header.imageset`. We updated this for clarification, and to sync up with our other clients & services.
 - Updated email login & checkout UI.

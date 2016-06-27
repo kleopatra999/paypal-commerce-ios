@@ -57,6 +57,10 @@ NS_ASSUME_NONNULL_BEGIN
 +(nullable id<ModestStoreDelegate>)delegate;
 
 
+/**
+ If you have a general app 'log out' or reset functionality, you can call this method to log out the user from the shop as well.
+ */
++(void)logoutUserWithCompletionHandler:(void(^)(BOOL success, NSError *error))completionHandler;
 
 
 
@@ -162,6 +166,9 @@ Please override this in your App Delegate:
 +(MDSTProductCardView *)productCardViewWithFrame:(CGRect)frame searchTerm:(NSString *)searchTerm completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
 +(MDSTProductCardView *)productCardViewWithSearchTerm:(NSString *)searchTerm completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
 
++(MDSTProductCardView *)productCardViewWithFrame:(CGRect)frame productSKU:(NSString *)productSKU completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
++(MDSTProductCardView *)productCardViewWithSKU:(NSString *)productSKU completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
+
 
 
 /** If you'd like to present your own UI for a product & purchase, you can do that here.
@@ -171,6 +178,10 @@ Please override this in your App Delegate:
 
 /** To grab the first product for a search term */
 +(void)fetchProductWithSearchTerm:(NSString *)searchTerm completion:(nullable void (^)(MDSTProduct * __nullable product, NSError * __nullable error))completion;
+
+/** To grab a product via its SKU */
++(void)fetchProductWithSKU:(NSString *)productSKU completion:(nullable void (^)(MDSTProduct * __nullable product, NSError * __nullable error))completion;
+
 
 /** to grab all products for a search term:
     perPage = number of results per page

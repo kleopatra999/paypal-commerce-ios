@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ModestStoreSDK"
-  s.version      = "1.9"
+  s.version      = "1.10.0-beta"
   s.summary      = "PayPal Commerce SDK"
   s.homepage     = "https://commerce.paypal.com/"
 
@@ -12,8 +12,13 @@ Pod::Spec.new do |s|
   s.license = {
     "type" => "Commercial",
     "text" => <<-LICENSE
-                  Copyright © 2015 PayPal, Inc.
-                  All rights reserved.
+Copyright (c) 2009-2016 Braintree, a division of PayPal, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
                     PaymentKit from Stripe
 
@@ -70,7 +75,7 @@ THE SOFTWARE.
 
   s.requires_arc    = true
   
-  s.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "1.9" }
+  s.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "1.10.0-beta" }
 
   s.source_files    = "ModestStoreSDK/*.h"
   s.public_header_files = "ModestStoreSDK/*.h"
@@ -81,7 +86,7 @@ THE SOFTWARE.
   s.resource_bundle = { 'ModestResources' => 'ModestStoreSDK/ModestResources/*' }
 
   s.weak_frameworks = "PassKit", "WebKit";
-    
+
   s.subspec 'Core' do |ss|
     ss.dependency "Mantle", "~> 1.5"
     ss.dependency "AFNetworking", "~> 2.6"

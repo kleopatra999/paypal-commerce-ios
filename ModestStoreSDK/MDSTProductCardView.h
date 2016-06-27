@@ -22,6 +22,10 @@
  */
 @property (nonatomic, readonly, nullable) NSString *productSearchTerm;
 
+/** The product SKU used to fetch a product
+ */
+@property (nonatomic, readonly, nullable) NSString *productSKU;
+
 /** The actual product object. Includes name, description, etc.
  */
 @property (nonatomic, readonly, nullable) MDSTProduct *product;
@@ -75,4 +79,18 @@
 -(nullable instancetype)initSearchTerm:(nonnull NSString *)searchTerm
                             completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
 
+/** init with a frame, along with a product SKU & optional completion handler.
+ This view should be at least 200x80pt, though we recommend at least 250x80pt.
+ */
+-(nullable instancetype)initWithFrame:(CGRect)frame
+                           productSKU:(nonnull NSString *)productSKU
+                           completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
+
+/** init with a product SKU & optional completion handler.
+ This view should be at least 200x80pt, though we recommend at least 250x80pt.
+ */
+-(nullable instancetype)initWithProductSKU:(nonnull NSString *)productSKU
+                                completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
+
 @end
+
