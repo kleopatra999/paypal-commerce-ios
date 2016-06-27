@@ -23,4 +23,9 @@
 -(void)loadProductWithSearchTerm:(nonnull NSString *)searchTerm
                       completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
 
+/** load with a product sku & optional completion handler
+ */
+-(void)loadProductWithProductSKU:(nonnull NSString *)productSKU
+                      completion:(nullable void (^)(BOOL success, NSError * __nullable error))completion;
+
 @end
