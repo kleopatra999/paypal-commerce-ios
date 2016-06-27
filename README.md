@@ -3,7 +3,7 @@
 # PayPal Commerce iOS SDK
 **PayPal Commerce is currently in closed beta.** Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).
 
-You can read [documentation for the PayPal Commerce iOS SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview).
+You can read [documentation for the PayPal Commerce iOS SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview) and check out our [example projects on GitHub](ExampleProjects/).
 
 ## What is PayPal Commerce?
 PayPal Commerce is building a better way to sell on mobile without changing the way you do business. We give your customers a mobile shopping experience with less typing, smarter purchasing, and more flexibility. We give you a mobile shop that can exist as a standalone app or embedded into your existing app, all with minimal code.
