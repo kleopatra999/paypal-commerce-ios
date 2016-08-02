@@ -10,6 +10,8 @@ PayPal Commerce is building a better way to sell on mobile without changing the 
 
 Simply connect your ecommerce platform and you can process and fulfill orders as you normally do. Currently, we support Magento, Bigcommerce, and Demandware, and we are actively working on integrating more third party platforms.
 
+While we are in beta, you can check out the included example projects, which work with a demo shop we set up called "Dress Shoes." These are connected to a sandbox payment gateway – you can use these [standard test credit card account numbers](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm) to test.
+
 ## Communication
 [Sign up to receive emails when we release new versions of the SDK](http://eepurl.com/_c1K9). When a new version is released, we will email you, as well as post a tag in the [Releases section](https://github.com/braintree/paypal-commerce-ios/releases) and update the [CHANGELOG.md](CHANGELOG.md) file.
 
