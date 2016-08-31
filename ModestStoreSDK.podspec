@@ -71,7 +71,7 @@ THE SOFTWARE.
 
   s.author  = { "PayPal, Inc" => "commerce-sdk@getbraintree.com" }
   
-  s.platform = :ios, "7.0"
+  s.platform = :ios, "8.0"
 
   s.requires_arc    = true
   
