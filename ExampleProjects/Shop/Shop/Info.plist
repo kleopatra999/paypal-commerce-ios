@@ -136,5 +136,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Your camera would only be used to let you scan your credit card.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Your contacts would only be used to let you import your shipping address.</string>
 </dict>
 </plist>
