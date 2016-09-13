@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.modest.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -86,6 +86,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Your camera would only be used to let you scan your credit card.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Your contacts would only be used to let you import your shipping address.</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
@@ -136,9 +140,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSCameraUsageDescription</key>
-	<string>Your camera would only be used to let you scan your credit card.</string>
-	<key>NSContactsUsageDescription</key>
-	<string>Your contacts would only be used to let you import your shipping address.</string>
 </dict>
 </plist>

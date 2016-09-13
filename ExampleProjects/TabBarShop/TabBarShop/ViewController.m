@@ -3,14 +3,14 @@
 //  TabBarShop
 //
 //  Created by Robert Haining on 7/27/15.
-//  Copyright (c) 2015 Modest. All rights reserved.
+//  Copyright (c) 2015 Braintree, a division of PayPal, Inc. All rights reserved.
 //
 
 #import "ViewController.h"
 #import <RSSParser.h>
 #import <UIImageView+AFNetworking.h>
 #import "WebViewController.h"
-#import <ModestStoreSDK/ModestStoreSDK.h>
+#import <PayPalCommerce/PayPalCommerce.h>
 #import "TableViewCell.h"
 #import <SafariServices/SafariServices.h>
 
@@ -32,7 +32,7 @@
     self.tableView.dataSource = self;
     self.tableView.rowHeight = 100;
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:self.newsCellReuseID];
-    [self.tableView registerClass:[MDSTProductCardTableViewCell class] forCellReuseIdentifier:self.adCellReuseID];
+    [self.tableView registerClass:[PPCProductCardTableViewCell class] forCellReuseIdentifier:self.adCellReuseID];
     [self.view addSubview:self.tableView];
     
     self.title = @"Braintree Blog";
@@ -87,7 +87,7 @@
         
         //here we're showing a basic product cell within this content.
         //  put in a search term here that makes sense for your store
-        MDSTProductCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.adCellReuseID];
+        PPCProductCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.adCellReuseID];
         NSArray *terms = @[@"manchester", @"buckle", @"shoe"];
         NSUInteger randomIdx = arc4random() % terms.count;
         NSString *term = terms[randomIdx];

@@ -14,7 +14,7 @@
 		EF062D791B66C4CD00B91199 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF062D781B66C4CD00B91199 /* Images.xcassets */; };
 		EF062D881B66C4CD00B91199 /* TabBarShopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF062D871B66C4CD00B91199 /* TabBarShopTests.m */; };
 		EF062D931B66C5EA00B91199 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF062D921B66C5EA00B91199 /* WebViewController.m */; };
-		EF4CDBBE1B66C8E70067CAF6 /* Modest-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4CDBBD1B66C8E70067CAF6 /* Modest-Config.plist */; };
+		EF4CDBBE1B66C8E70067CAF6 /* PayPalCommerce-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4CDBBD1B66C8E70067CAF6 /* PayPalCommerce-Config.plist */; };
 		EFD1B6341BDEA13600E89974 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD1B6331BDEA13600E89974 /* TableViewCell.m */; };
 		EFE2E3A11BE0029D009CE37A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE2E39F1BE0029D009CE37A /* LaunchScreen.storyboard */; };
 		EFE2E3A71BE0057D009CE37A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFE2E3A61BE0057D009CE37A /* Settings.bundle */; };
@@ -47,7 +47,7 @@
 		EF062D871B66C4CD00B91199 /* TabBarShopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarShopTests.m; sourceTree = "<group>"; };
 		EF062D911B66C5EA00B91199 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		EF062D921B66C5EA00B91199 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		EF4CDBBD1B66C8E70067CAF6 /* Modest-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Modest-Config.plist"; sourceTree = "<group>"; };
+		EF4CDBBD1B66C8E70067CAF6 /* PayPalCommerce-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PayPalCommerce-Config.plist"; sourceTree = "<group>"; };
 		EFD1B6321BDEA13600E89974 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		EFD1B6331BDEA13600E89974 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		EFE2E3A01BE0029D009CE37A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				EF062D911B66C5EA00B91199 /* WebViewController.h */,
 				EF062D921B66C5EA00B91199 /* WebViewController.m */,
 				EFE2E39F1BE0029D009CE37A /* LaunchScreen.storyboard */,
-				EF4CDBBD1B66C8E70067CAF6 /* Modest-Config.plist */,
+				EF4CDBBD1B66C8E70067CAF6 /* PayPalCommerce-Config.plist */,
 				EFE2E3A61BE0057D009CE37A /* Settings.bundle */,
 				EF062D781B66C4CD00B91199 /* Images.xcassets */,
 				EF062D6B1B66C4CD00B91199 /* Supporting Files */,
@@ -203,8 +203,8 @@
 		EF062D601B66C4CD00B91199 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = Modest;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Braintree, a division of PayPal, Inc";
 				TargetAttributes = {
 					EF062D671B66C4CD00B91199 = {
 						CreatedOnToolsVersion = 6.4;
@@ -241,7 +241,7 @@
 			files = (
 				EFE2E3A71BE0057D009CE37A /* Settings.bundle in Resources */,
 				EFE2E3A11BE0029D009CE37A /* LaunchScreen.storyboard in Resources */,
-				EF4CDBBE1B66C8E70067CAF6 /* Modest-Config.plist in Resources */,
+				EF4CDBBE1B66C8E70067CAF6 /* PayPalCommerce-Config.plist in Resources */,
 				EF062D791B66C4CD00B91199 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,14 +359,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -403,8 +406,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -436,6 +441,7 @@
 				INFOPLIST_FILE = TabBarShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paypal.commerce.TabBarShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -448,6 +454,7 @@
 				INFOPLIST_FILE = TabBarShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paypal.commerce.TabBarShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
