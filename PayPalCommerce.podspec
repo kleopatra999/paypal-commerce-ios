@@ -108,7 +108,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc    = true
   
-  s.source       = { :git => "git@github.com:braintree/paypal-commerce-ios.git", :tag => "2.0.0-beta" }
+  s.source       = { :git => "https://github.com/braintree/paypal-commerce-ios.git", :tag => "2.0.0-beta" }
 
   s.source_files    = "PayPalCommerce/*.h"
   s.public_header_files = "PayPalCommerce/*.h"
@@ -120,20 +120,16 @@ Pod::Spec.new do |s|
 
   s.weak_frameworks = "PassKit", "WebKit";
 
-  s.subspec 'Core' do |ss|
-    ss.dependency "Mantle", "~> 1.5"
-    ss.dependency "AFNetworking", "~> 2.6"
-    ss.dependency "FBSDKLoginKit", '~> 4.6'
-    ss.dependency "CGLMail", "~> 0.1.0"
-    ss.dependency 'GoogleAnalytics', '~> 3.1'
-    ss.dependency 'PayPal-iOS-SDK', '~> 2.12.0'
-    ss.dependency 'ECSlidingViewController', '~> 2.0'
-    ss.dependency 'libPhoneNumber-iOS', '~> 0.8'
-    ss.dependency 'LogglyLogger-CocoaLumberjack', '~> 2.0'
-    ss.dependency 'Braintree/Core', '~> 4.0'
-    ss.dependency 'Braintree/Card', '~> 4.0'
-  end
-
-  s.default_subspecs = 'Core'
+  s.dependency "Mantle", "~> 1.5"
+  s.dependency "AFNetworking", "~> 2.6"
+  s.dependency "FBSDKLoginKit", '~> 4.6'
+  s.dependency "CGLMail", "~> 0.1.0"
+  s.dependency 'GoogleAnalytics', '~> 3.1'
+  s.dependency 'PayPal-iOS-SDK', '~> 2.12.0'
+  s.dependency 'ECSlidingViewController', '~> 2.0'
+  s.dependency 'libPhoneNumber-iOS', '~> 0.8'
+  s.dependency 'LogglyLogger-CocoaLumberjack', '~> 2.0'
+  s.dependency 'Braintree/Core', '~> 4.0'
+  s.dependency 'Braintree/Card', '~> 4.0'
 
 end
