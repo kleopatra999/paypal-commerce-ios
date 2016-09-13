@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, "8.0"
 
-pod 'ModestStoreSDK', :git => 'git@github.com:braintree/paypal-commerce-ios.git'
+pod 'PayPalCommerce', :git => 'git@github.com:braintree/paypal-commerce-ios.git'
 target 'Shop'
 
 post_install do |generate|
