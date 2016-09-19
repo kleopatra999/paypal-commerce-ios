@@ -28,6 +28,14 @@
 				<string>pypl-public-sdk-demo-app</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -78,6 +86,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Your camera would only be used to let you scan your credit card.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Your contacts would only be used to let you import your shipping address.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>You can save product photos to your library.</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
@@ -86,7 +100,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Shop</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.modest.sdk.home</string>
+			<string>com.paypal.commerce.home</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -94,7 +108,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Search</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.modest.sdk.search</string>
+			<string>com.paypal.commerce.search</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -102,7 +116,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Purchases</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.modest.sdk.order-history</string>
+			<string>com.paypal.commerce.order-history</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>
