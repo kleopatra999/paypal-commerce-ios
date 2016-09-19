@@ -1,5 +1,26 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v2.0.0-beta September 21, 2016
+- We now support Xcode 8+ and iOS 10+. As such, we no longer support iOS 7.
+- We have updated developer-facing class & method names from Modest to PayPal Commerce. You can generally update "ModestStore" to "PayPalCommerce", and "MDST" to "PPC". Please reach out to us if you have any questions.
+- We have made it easier for users to log in with PayPal. We are now using Braintree's v.zero iOS SDK, instead of PayPal's iOS SDK. In order to use this, you will need to add your bundle id as a URL scheme. You can either explicitly type it in via `com.companyname.appname` or you can pull in the variable `$(PRODUCT_BUNDLE_IDENTIFIER)`. If you do not, PayPal login will not work.
+- We use a few iOS frameworks that require you to identify their usage in your Info.plist:
+```xml
+	<key>NSCameraUsageDescription</key>
+	<string>Your camera would only be used to let you scan your credit card.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Your contacts would only be used to let you import your shipping address.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>You can save product photos to your library.</string>
+```
+
+Additionally, we have fixed a few bugs & polished up a few things, such as:
+- Fixed the layout of fullscreen variants selection.
+- Fixed a bug where if a user tapped a product card embedded by the 'host app', sometimes the product detail view wasn't loading as expected.
+- Improved credit card scanning for expiration dates & cvv.
+- Fixed an issue that popped up in iOS 10 where some of our modally presented views were unexpectedly rotating to landscape.
+- Fixed a bug where some of our drawers that were presented via pan gesture recognizers would end up in an unexpected state if the presentation was canceled.
+
 ## v1.10.0-beta – June 27, 2016
 - We now support CocoaPods v1.0+!
 - Users can now logout in the Profile. SDK developers can now programmatically log out users as well (for instance, if you have an app-wide logout/reset usage).
