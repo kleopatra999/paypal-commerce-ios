@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>${PRODUCT_NAME}</title>
+    </head>
+    
+    <body>
+        
+        <div id="product_wrapper" style="max-width: 400pt; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">
+
+            <div id="user_spacing">
+                <br/><br/><br/>
+            </div>
+
+            <div id="store_logo" align="center" style="padding-bottom: 10pt;">
+                <a href="${PRODUCT_URL}"><img src="${STORE_LOGO}" style="max-width: 100%"/></a>
+            </div>
+        
+            <div id="product_image" align="center">
+                <a href="${PRODUCT_URL}"><img src="${IMG_URL}" style="max-width: 100%; max-height: 270pt; padding-bottom: 10pt;"/></a>
+            </div>
+        
+            <div id="product_name" align="center" style="font-weight: 500; font-size: 20pt; padding-bottom: 10pt;">
+                <a href="${PRODUCT_URL}" style="color: ${LINK_COLOR}; text-decoration: ${LINK_TEXT_DECORATION};">${PRODUCT_NAME}</a>
+            </div>
+        
+            <div id="product_description" style="font-weight: 200; font-size: 15pt; line-height: 19pt; padding-bottom: 15pt; color: black;">
+                ${PRODUCT_DESCRIPTION}
+            </div>
+        
+            <div id="product_buy_button_wrapper" align="center" style="margin: 15pt 0pt 15pt 0pt;">
+                <a id="product_buy_button" href="${PRODUCT_URL}" align="center" style="background-color: ${BUY_BUTTON_COLOR}; color: white; margin: 15pt 0pt 15pt 0pt; padding: 10pt 15pt 10pt 15pt; font-weight: 500; font-size: 14pt; text-decoration: none; border-radius: 4pt;">Buy for ${PRODUCT_TOTAL_COST}</a>
+            </div>
+            
+            <div id="product_url">
+                <a href="${PRODUCT_URL}" style="color: ${LINK_COLOR}; text-decoration: ${LINK_TEXT_DECORATION};">${PRODUCT_URL}</a>
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>
