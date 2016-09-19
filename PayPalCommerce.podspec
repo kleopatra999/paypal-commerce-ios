@@ -125,11 +125,12 @@ Pod::Spec.new do |s|
   s.dependency "FBSDKLoginKit", '~> 4.6'
   s.dependency "CGLMail", "~> 0.1.0"
   s.dependency 'GoogleAnalytics', '~> 3.1'
-  s.dependency 'PayPal-iOS-SDK', '~> 2.12.0'
   s.dependency 'ECSlidingViewController', '~> 2.0'
   s.dependency 'libPhoneNumber-iOS', '~> 0.8'
   s.dependency 'LogglyLogger-CocoaLumberjack', '~> 2.0'
   s.dependency 'Braintree/Core', '~> 4.0'
   s.dependency 'Braintree/Card', '~> 4.0'
+  s.dependency 'Braintree/PayPalOneTouch', '~> 4.0'
+  s.dependency 'CardIO', '~> 5.0'
 
 end
