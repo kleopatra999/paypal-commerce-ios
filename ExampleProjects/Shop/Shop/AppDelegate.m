@@ -3,11 +3,11 @@
 //  Shop
 //
 //  Created by Robert Haining on 10/26/15.
-//  Copyright © 2015 Modest. All rights reserved.
+//  Copyright © 2015 Braintree, a division of PayPal, Inc. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <ModestStoreSDK/ModestStoreSDK.h>
+#import <PayPalCommerce/PayPalCommerce.h>
 
 @implementation AppDelegate
 
@@ -17,7 +17,7 @@
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     
-    // the good stuff! let's configure modest!
+    // the good stuff! let's configure paypal commerce!
     // we're defaulting to a sample store,
     // but you should replace these with your own credentials from commerce.paypal.com
 #warning Please obfuscate the client id & secret before shipping. Thanks! paypal commerce
@@ -25,12 +25,12 @@
     NSString *clientSecret = @"4nj6TSMTTDuQXnyzPwIaAQGEKEiTqkTDGnG-cq1kST-w";
     
     if(!clientId || !clientSecret){
-        [NSException raise:@"ModestException" format:@"Missing client id + secret"];
+        [NSException raise:@"PayPalCommerceException" format:@"Missing client id + secret"];
         return YES;
     }
     
-    [ModestStoreSDK configureWithClientID:clientId clientSecret:clientSecret launchOptions:launchOptions];
-    [ModestStoreSDK presentStoreApp];
+    [PayPalCommerce configureWithClientID:clientId clientSecret:clientSecret launchOptions:launchOptions];
+    [PayPalCommerce presentStoreApp];
 
 #warning Please configure Apple Pay if you would like to enable it for your customers.
     /**
@@ -40,38 +40,38 @@
      3. Configure your Apple Pay merchant ID here.
      */
 //    NSString *applePayMerchantID = @"";
-//    [ModestStoreSDK configureApplePayMerchantID:applePayMerchantID];
+//    [PayPalCommerce configureApplePayMerchantID:applePayMerchantID];
 
     return YES;
 
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    [ModestStoreSDK openURL:url sourceApplication:sourceApplication annotation:annotation];
+    [PayPalCommerce openURL:url sourceApplication:sourceApplication annotation:annotation];
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray *restorableObjects))restorationHandler {
-    [ModestStoreSDK continueUserActivity:userActivity restorationHandler:restorationHandler];
+    [PayPalCommerce continueUserActivity:userActivity restorationHandler:restorationHandler];
     return YES;
 }
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-    [ModestStoreSDK didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    [PayPalCommerce didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    [ModestStoreSDK didFailToRegisterForRemoteNotificationsWithError:error];
+    [PayPalCommerce didFailToRegisterForRemoteNotificationsWithError:error];
 }
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
-    [ModestStoreSDK didRegisterUserNotificationSettings:notificationSettings];
+    [PayPalCommerce didRegisterUserNotificationSettings:notificationSettings];
 }
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    [ModestStoreSDK didReceiveRemoteNotification:userInfo];
+    [PayPalCommerce didReceiveRemoteNotification:userInfo];
 }
 
 // In order for Home Screen 3D Touch actions to work properly in iOS 9+ on supported devices:
 -(void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
-    BOOL didPerformAction = [ModestStoreSDK performActionForShortcutItem:shortcutItem];
+    BOOL didPerformAction = [PayPalCommerce performActionForShortcutItem:shortcutItem];
     if(!didPerformAction){
         //if you added any custom 3D Touch shortcuts, you can handle them here
     }

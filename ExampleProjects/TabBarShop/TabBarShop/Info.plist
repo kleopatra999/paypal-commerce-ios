@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.modest.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -26,6 +26,14 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>pypl-public-sdk-tab-bar-demo-app</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			</array>
 		</dict>
 	</array>
@@ -78,6 +86,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Your camera would only be used to let you scan your credit card.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Your contacts would only be used to let you import your shipping address.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>You can save product photos to your library.</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
