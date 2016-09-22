@@ -1,6 +1,6 @@
 # PayPal Commerce iOS SDK Changelog
 
-## v2.0.0-beta September 21, 2016
+## v2.0.0-beta September 22, 2016
 - We now support Xcode 8+ and iOS 10+. As such, we no longer support iOS 7.
 - We have updated developer-facing class & method names from Modest to PayPal Commerce. You can generally update "ModestStore" to "PayPalCommerce", and "MDST" to "PPC". Please reach out to us if you have any questions.
 - We have made it easier for users to log in with PayPal. We are now using Braintree's v.zero iOS SDK, instead of PayPal's iOS SDK. In order to use this, you will need to add your bundle id as a URL scheme. You can either explicitly type it in via `com.companyname.appname` or you can pull in the variable `$(PRODUCT_BUNDLE_IDENTIFIER)`. If you do not, PayPal login will not work.
