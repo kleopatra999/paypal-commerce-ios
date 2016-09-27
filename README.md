@@ -1,6 +1,14 @@
 [![PayPal Commerce](assets/pp_commerce_logo.png)](https://commerce.paypal.com/)
 
 # PayPal Commerce iOS SDK
+The PayPal Commerce iOS SDK allows you to embed a store directly within your own native iOS app — all with minimal code.
+
+The SDK can be used in a few different ways:
+
+- A standalone iOS app
+- A store embedded into an existing app
+- Product cards and buy buttons embedded in your existing app, enabling in-app checkout.
+
 **PayPal Commerce is currently in closed beta.** Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).
 
 You can read [documentation for the PayPal Commerce iOS SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview) and check out our [example projects on GitHub](ExampleProjects/).
