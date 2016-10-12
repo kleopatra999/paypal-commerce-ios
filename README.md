@@ -11,7 +11,7 @@ The SDK can be used in a few different ways:
 
 **PayPal Commerce is currently in closed beta.** Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).
 
-While you're here, we invite you to:
+We invite you to:
 - Read the [documentation for the SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview)
 - Check out our [example projects on GitHub](ExampleProjects/)
 - Download our example app: [Clothes Shop](https://appstore.com/clothesshop), which shows off all the features of the SDK
