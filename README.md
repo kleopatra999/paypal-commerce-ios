@@ -20,7 +20,7 @@ We invite you to:
 
 
 ## What is PayPal Commerce?
-PayPal Commerce is building a better way to sell on mobile without changing the way you do business. We give your customers a mobile shopping experience with less typing, smarter purchasing, and more flexibility. We give you a mobile shop that can exist as a standalone app or embedded into your existing app, all with minimal code.
+PayPal Commerce is building a better way to sell on mobile without changing the way you do business. We give your customers a mobile shopping experience with less typing, smarter purchasing, and more flexibility. We give you a mobile shop that can exist as a standalone app or be embedded into your existing app, all with minimal code.
 
 Simply connect your ecommerce platform and you can process and fulfill orders as you normally do. Currently, we support Magento, Bigcommerce, and Demandware, and we are actively working on integrating more third party platforms.
 
