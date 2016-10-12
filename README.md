@@ -3,18 +3,24 @@
 # PayPal Commerce iOS SDK
 The PayPal Commerce iOS SDK allows you to embed a store directly within your own native iOS app — all with minimal code.
 
-The SDK can be used in a few different ways:
 
+The SDK can be used in a few different ways:
 - A standalone iOS app
 - A store embedded into an existing app
-- Product cards and buy buttons embedded in your existing app, enabling in-app checkout.
+- Product cards and buy buttons embedded in your existing app, enabling in-app checkout
+
 
 **PayPal Commerce is currently in closed beta.** Apply to join at [commerce.paypal.com/register](https://commerce.paypal.com/register).
 
-You can read [documentation for the PayPal Commerce iOS SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview) and check out our [example projects on GitHub](ExampleProjects/).
+
+We invite you to:
+- Read the [documentation for the SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview).
+- Check out our [example projects on GitHub](ExampleProjects/).
+- Download our example app "[Clothes Shop](https://appstore.com/clothesshop)" from the App Store. It shows off all the features of the SDK.
+
 
 ## What is PayPal Commerce?
-PayPal Commerce is building a better way to sell on mobile without changing the way you do business. We give your customers a mobile shopping experience with less typing, smarter purchasing, and more flexibility. We give you a mobile shop that can exist as a standalone app or embedded into your existing app, all with minimal code.
+PayPal Commerce is building a better way to sell on mobile without changing the way you do business. We give your customers a mobile shopping experience with less typing, smarter purchasing, and more flexibility. We give you a mobile shop that can exist as a standalone app or be embedded into your existing app, all with minimal code.
 
 Simply connect your ecommerce platform and you can process and fulfill orders as you normally do. Currently, we support Magento, Bigcommerce, and Demandware, and we are actively working on integrating more third party platforms.
 
@@ -27,7 +33,7 @@ While we are in beta, you can check out the included example projects, which wor
 Please read our [contributing guidelines](CONTRIBUTING.md) prior to submitting a pull request.
 
 ## License
-Please refer to [LICENSE](LICENSE).
+Please refer to the [LICENSE](LICENSE).
 
 ## Not what you're looking for?
 Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want to visit the [PayPal iOS SDK](https://github.com/paypal/PayPal-iOS-SDK) repo or the [Braintree v.zero SDK for iOS](https://github.com/braintree/braintree_ios) repo.
