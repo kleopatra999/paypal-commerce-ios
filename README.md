@@ -14,7 +14,7 @@ The SDK can be used in a few different ways:
 We invite you to:
 - Read the [documentation for the SDK on the Braintree Developer website](https://developers.braintreepayments.com/guides/paypal-commerce-ios/overview)
 - Check out our [example projects on GitHub](ExampleProjects/)
-- Download our example app: [Clothes Shop](https://appstore.com/clothesshop), which shows off all the features of the SDK
+- Download our example app "[Clothes Shop](https://appstore.com/clothesshop)" from the App Store. It shows off all the features of the SDK
 
 ## What is PayPal Commerce?
 PayPal Commerce is building a better way to sell on mobile without changing the way you do business. We give your customers a mobile shopping experience with less typing, smarter purchasing, and more flexibility. We give you a mobile shop that can exist as a standalone app or embedded into your existing app, all with minimal code.
