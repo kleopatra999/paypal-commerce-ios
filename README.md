@@ -29,6 +29,10 @@ While we are in beta, you can check out the included example projects, which wor
 ## Communication
 [Sign up to receive emails when we release new versions of the SDK](http://eepurl.com/_c1K9). When a new version is released, we will email you, as well as post a tag in the [Releases section](https://github.com/braintree/paypal-commerce-ios/releases) and update the [CHANGELOG.md](CHANGELOG.md) file.
 
+## Feedback
+"I was completely impressed with how simple it was to add the PayPal Commerce SDK to the Intelligentsia app. It was a breeze, and there were zero issues getting it integrated into the custom UI, while keeping a consistent user experience."
+- Jerry Jones, [Spaceman Labs](http://spacemanlabs.com)
+
 ## Contributing
 Please read our [contributing guidelines](CONTRIBUTING.md) prior to submitting a pull request.
 
