@@ -31,7 +31,7 @@ While we are in beta, you can check out the included example projects, which wor
 
 ## Feedback
 "I was completely impressed with how simple it was to add the PayPal Commerce SDK to the Intelligentsia app. It was a breeze, and there were zero issues getting it integrated into the custom UI, while keeping a consistent user experience."
-- Jerry Jones, [Spaceman Labs](http://spacemanlabs.com)
+    - Jerry Jones, [Spaceman Labs](http://spacemanlabs.com)
 
 ## Contributing
 Please read our [contributing guidelines](CONTRIBUTING.md) prior to submitting a pull request.
