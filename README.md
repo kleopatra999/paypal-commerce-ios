@@ -41,4 +41,4 @@ Please read our [contributing guidelines](CONTRIBUTING.md) prior to submitting a
 Please refer to the [LICENSE](LICENSE).
 
 ## Not what you're looking for?
-Looking for the PayPal iOS SDK to add PayPal payments to your app? You'll want to visit the [PayPal iOS SDK](https://github.com/paypal/PayPal-iOS-SDK) repo or the [Braintree v.zero SDK for iOS](https://github.com/braintree/braintree_ios) repo.
+Looking for the SDK to add PayPal payments to your app? You'll want to visit the [Braintree v.zero SDK for iOS](https://github.com/braintree/braintree_ios) repo.
