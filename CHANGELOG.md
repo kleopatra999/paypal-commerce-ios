@@ -1,5 +1,8 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v2.0.0 October 31, 2016
+- Dropped the 'beta' from the version number.
+
 ## v2.0.0-beta September 22, 2016
 - We now support Xcode 8+ and iOS 10+. As such, we no longer support iOS 7.
 - We have updated developer-facing class & method names from Modest to PayPal Commerce. You can generally update "ModestStore" to "PayPalCommerce", and "MDST" to "PPC". Please reach out to us if you have any questions.
