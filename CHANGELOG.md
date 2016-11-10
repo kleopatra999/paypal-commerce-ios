@@ -1,5 +1,16 @@
 # PayPal Commerce iOS SDK Changelog
 
+## v2.1.0 November 15, 2016
+- If a user selects a variant, we'll fast forward to that variant's photo in the gallery.
+- We added support for enhanced ecommerce for Google Analytics – please follow https://developers.google.com/analytics/devguides/collection/ios/v3/enhanced-ecommerce to setup.
+- Added Touch ID support for future purchase protection.
+
+Fixed bugs:
+- You could end up with Apple Pay & PayPal both as default payment methods.
+- The app would crash if you were not logged in, and you tried to purchase with Apple Pay using an existing email address.
+- Facebook login worked intermittently.
+- Fixes alignment of clock image with text in the "30 minutes to edit or unbuy" banner
+
 ## v2.0.0 October 31, 2016
 - Dropped the 'beta' from the version number.
 
