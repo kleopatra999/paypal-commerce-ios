@@ -117,6 +117,7 @@ Pod::Spec.new do |s|
   s.library         = 'PayPalCommerce'
 
   s.resource_bundle = { 'PayPalCommerceResources' => 'PayPalCommerce/PayPalCommerceResources/*' }
+  s.resources = ["PayPalCommerceResources/*html", "PayPalCommerce/PayPalCommerce-Info.plist"]
 
   s.weak_frameworks = "PassKit", "WebKit";
 
