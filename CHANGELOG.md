@@ -1,6 +1,6 @@
 # PayPal Commerce iOS SDK Changelog
 
-## v2.1.0 November 15, 2016
+## v2.1.0 November 17, 2016
 - If a user selects a variant, we'll fast forward to that variant's photo in the gallery.
 - We added support for enhanced ecommerce for Google Analytics – please follow https://developers.google.com/analytics/devguides/collection/ios/v3/enhanced-ecommerce to setup. The checkout labels should be: `Email`, `Address`, `Payment`, `Confirmation`.
 - Added Touch ID support for future purchase protection.
