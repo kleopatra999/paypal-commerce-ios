@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PayPalCommerce"
-  s.version      = "2.0.0"
+  s.version      = "2.1.0"
   s.summary      = "PayPal Commerce SDK"
   s.homepage     = "https://commerce.paypal.com/"
 
@@ -108,7 +108,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc    = true
   
-  s.source       = { :git => "https://github.com/braintree/paypal-commerce-ios.git", :tag => "2.0.0" }
+  s.source       = { :git => "https://github.com/braintree/paypal-commerce-ios.git", :tag => "2.1.0" }
 
   s.source_files    = "PayPalCommerce/*.h"
   s.public_header_files = "PayPalCommerce/*.h"
@@ -117,6 +117,7 @@ Pod::Spec.new do |s|
   s.library         = 'PayPalCommerce'
 
   s.resource_bundle = { 'PayPalCommerceResources' => 'PayPalCommerce/PayPalCommerceResources/*' }
+  s.resources = ["PayPalCommerceResources/*html", "PayPalCommerce/PayPalCommerce-Info.plist"]
 
   s.weak_frameworks = "PassKit", "WebKit";
 
